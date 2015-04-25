@@ -3,7 +3,7 @@ title: Rather be functional
 subtitle: rbf for short
 # email: hi@rbf.io
 description: "rbf's thoughts about clojure and coding in general"
-baseurl: "/blog"
+# baseurl: "/blog"
 url: "http://rbf.io"
 username: rbf
 # Build settings
