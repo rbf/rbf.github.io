@@ -1,57 +1,19 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="rather be functional : rbf for short" />
+<div class="home">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <h1>Posts</h1>
 
-    <title>rather be functional</title>
-  </head>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <div class="post-summary"> – Some {{ post.content | number_of_words }} words about {{ post.tags | array_to_sentence_string }}.</div>
+      </li>
+    {% endfor %}
+  </ul>
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/rbf">View on GitHub</a>
-
-          <h1 id="project_title">rather be functional</h1>
-          <h2 id="project_tagline">rbf for short</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h2>
-<a name="snippets-galore-coming-soon" class="anchor" href="#snippets-galore-coming-soon"><span class="octicon octicon-link"></span></a>Snippets galore coming soon</h2>
-
-<p>Here we'll being a new series of microblogs about handy code snippets in several languages, but specially in Clojure.</p>
-
-<p>Keep in touch also on:</p>
-
-<ul>
-<li>Email at <a href="mailto:info@rbf.li">info@rbf.li</a>
-</li>
-<li>GitHub at <a href="https://github.com/rbf">https://github.com/rbf</a>
-</li>
-<li>Twitter at ___ (comming soon)</li>
-</ul><p>See you soon!</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
+</div>
