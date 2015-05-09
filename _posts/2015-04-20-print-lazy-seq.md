@@ -3,7 +3,7 @@ layout: post
 title:  "Print a lazy seq"
 date:   2015-04-20
 categories: code clojure
-tags: clojure lazyness printing
+tags: clojure laziness printing
 ---
 
 To get a `str` representation of a non-lazy collection is not an issue:
