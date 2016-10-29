@@ -9,3 +9,6 @@ username: rbf
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Source: https://josh.st/2015/10/22/jekyll-well-known-and-dotfiles/
+include: [".well-known"]
