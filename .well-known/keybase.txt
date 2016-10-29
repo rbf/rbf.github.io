@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/rbf
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://rbf.io
+  * I am rbf (https://keybase.io/rbf) on keybase.
+  * I have a public key ASBcj01Bj4eJ1P302M_ejX2WZIXx7m2Uay4vr7-ndyor6Ao
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010172b1277796bd8ada621a07995e5432a74765e7e9347732c343b708c69b2b24550a",
+            "host": "keybase.io",
+            "kid": "01205c8f4d418f8789d4fdf4d8cfde8d7d966485f1ee6d946b2e2fafbfa7772a2be80a",
+            "uid": "01a0d0e53b2345784a5f47788c518719",
+            "username": "rbf"
+        },
+        "service": {
+            "hostname": "rbf.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.17"
+    },
+    "ctime": 1477749045,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1477748457,
+        "hash": "e93d521c86e46c8c781b008cff07cbf3a922a58c0fcb23944d04dad85ed6d1303668805f55f5578357f46c1dea68213ea73796fd28cc6f91c5f23e3066b60325",
+        "seqno": 692809
+    },
+    "prev": "dd86b47c7bf060f02f273a051a51378cc2d197b2e716358dd2dec50203a7724b",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgXI9NQY+HidT99NjP3o19lmSF8e5tlGsuL6+/p3cqK+gKp3BheWxvYWTFAuh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxNzJiMTI3Nzc5NmJkOGFkYTYyMWEwNzk5NWU1NDMyYTc0NzY1ZTdlOTM0NzczMmMzNDNiNzA4YzY5YjJiMjQ1NTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNWM4ZjRkNDE4Zjg3ODlkNGZkZjRkOGNmZGU4ZDdkOTY2NDg1ZjFlZTZkOTQ2YjJlMmZhZmJmYTc3NzJhMmJlODBhIiwidWlkIjoiMDFhMGQwZTUzYjIzNDU3ODRhNWY0Nzc4OGM1MTg3MTkiLCJ1c2VybmFtZSI6InJiZiJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoicmJmLmlvIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNyJ9LCJjdGltZSI6MTQ3Nzc0OTA0NSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDc3NzQ4NDU3LCJoYXNoIjoiZTkzZDUyMWM4NmU0NmM4Yzc4MWIwMDhjZmYwN2NiZjNhOTIyYTU4YzBmY2IyMzk0NGQwNGRhZDg1ZWQ2ZDEzMDM2Njg4MDVmNTVmNTU3ODM1N2Y0NmMxZGVhNjgyMTNlYTczNzk2ZmQyOGNjNmY5MWM1ZjIzZTMwNjZiNjAzMjUiLCJzZXFubyI6NjkyODA5fSwicHJldiI6ImRkODZiNDdjN2JmMDYwZjAyZjI3M2EwNTFhNTEzNzhjYzJkMTk3YjJlNzE2MzU4ZGQyZGVjNTAyMDNhNzcyNGIiLCJzZXFubyI6OSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBmWbgQrffQlwZTBTPHtaWdXK9FDk7tbqxWnNguaYmzaXJs4d+TvHhn3zdj+XB4vA/xCenH1oDn/10Er6oipm4NqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgBH0dyKzrSEMO2L8RcEW/5SfsBC6bXt99Boy8arHqzM2jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rbf
+
+==================================================================
