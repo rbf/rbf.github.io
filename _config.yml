@@ -16,9 +16,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Rather be functional
 subtitle: rbf for short
-# email: hi@rbf.io
+email: hi@rbf.io
 description: >
-  rbf's thoughts about clojure and coding in general
+  We make functional software.
 # baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://rbf.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username:
@@ -36,7 +36,12 @@ theme: minima # default
 google_analytics: UA-42657236-4
 
 gems:
-  - jekyll-feed
+  # - jekyll-avatar       # does not work :( https://github.com/benbalter/jekyll-avatar
+  - jekyll-feed           # SOURCE: https://github.com/jekyll/jekyll-feed
+  - jemoji                # SOURCE: https://github.com/jekyll/jemoji
+  - jekyll-mentions       # SOURCE: https://github.com/jekyll/jekyll-mentions
+  - jekyll-redirect-from  # SOURCE: https://github.com/jekyll/jekyll-redirect-from
+  - jekyll-sitemap        # SOURCE: https://github.com/jekyll/jekyll-sitemap
 
 exclude:
   - Gemfile
