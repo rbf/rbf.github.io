@@ -14,8 +14,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Rather be functional
-subtitle: rbf for short
+title: rbf.io
+subtitle: rather be functional
 email: hi@rbf.io
 description: >
   We make functional software.
