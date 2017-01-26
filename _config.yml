@@ -51,6 +51,14 @@ exclude:
 include:
   - ".well-known" # SOURCE: https://josh.st/2015/10/22/jekyll-well-known-and-dotfiles/
 
+# DOC: https://jekyllrb.com/docs/configuration/#front-matter-defaults
+defaults:
+  - scope:
+      type: 'posts'
+    values:
+      layout: 'post'
+
+
 sass:
     style: compressed
 

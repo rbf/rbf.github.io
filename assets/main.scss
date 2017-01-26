@@ -6,6 +6,12 @@ body {
   background-color: white;
 }
 
+.site-header {
+  border: none;
+    min-height: 56px;
+    position: relative;
+}
+
 .wrapper-centered {
   display: table;
   position: absolute;
@@ -32,14 +38,16 @@ body {
 
 .avatar {
   @extend .image-circle;
-  padding: 15px;
   &.small {
-    width: 48px;
+    width: 36px;
+    padding: 0;
   }
   &.medium {
     width: 100px;
+    padding: 15px;
   }
   &.large {
     width: 180px;
+    padding: 25px;
   }
 }

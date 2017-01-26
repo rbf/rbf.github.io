@@ -2,12 +2,14 @@
 layout: home
 ---
 
-# {{site.title}}
+{{site.title}}
 
 {% include avatar.html size='medium' %}
 
 We are a small software engineering studio based in [Zürich,
-Switzerland]. We make functional software.
+Switzerland].
+
+We make functional software and [write articles](/archive).
 
 <{{site.email}}>
 
