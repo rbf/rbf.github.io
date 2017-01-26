@@ -1,6 +1,5 @@
 ---
 title:      "Upgrade to Jekyll 3.3.0"
-date:       2016-11-09
 categories: articles
 tags:       jekyll
 ---
