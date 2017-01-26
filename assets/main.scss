@@ -25,3 +25,21 @@ body {
     width: 100%;
   }
 }
+
+.image-circle {
+    border-radius: 50%;
+}
+
+.avatar {
+  @extend .image-circle;
+  padding: 15px;
+  &.small {
+    width: 48px;
+  }
+  &.medium {
+    width: 100px;
+  }
+  &.large {
+    width: 180px;
+  }
+}

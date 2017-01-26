@@ -2,12 +2,12 @@
 layout: home
 ---
 
-:wave:
+# {{site.title}}
+
+{% include avatar.html size='medium' %}
 
 We are a small software engineering studio based in [Zürich,
 Switzerland]. We make functional software.
-
-Do you want to say [hi](mailto:{{site.email}})?
 
 <{{site.email}}>
 
