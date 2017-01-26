@@ -51,6 +51,9 @@ exclude:
 include:
   - ".well-known" # SOURCE: https://josh.st/2015/10/22/jekyll-well-known-and-dotfiles/
 
+sass:
+    style: compressed
+
 # SOURCE: http://jch.penibelst.de
 compress_html:
   clippings: all
