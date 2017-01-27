@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="grid post-list">
+  {% for post in site.posts %}
+    <div class="post-item">
+      <span class="post-meta col-2-12">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <div class="col-10-12">
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        {% include tags.html %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

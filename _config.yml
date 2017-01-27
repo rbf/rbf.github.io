@@ -58,6 +58,7 @@ defaults:
     values:
       author: 'rbf'
       layout: 'post'
+      lang: 'en'
 
 
 sass:

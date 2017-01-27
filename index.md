@@ -9,7 +9,7 @@ layout: home
 We are a small software engineering studio based in [Zürich,
 Switzerland].
 
-We make functional software and [write articles](/archive).
+We make functional software and [write articles](/blog).
 
 <{{site.email}}>
 

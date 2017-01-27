@@ -2,8 +2,14 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @import "minima";
+@import "simplegrid";
 body {
   background-color: white;
+}
+
+.itemprop {
+  // For data added to the HTML only for https://schema.org purposes
+  display: none;
 }
 
 .site-header {
@@ -49,5 +55,47 @@ body {
   &.large {
     width: 180px;
     padding: 25px;
+  }
+}
+
+ul.tags {
+  list-style-type: none;
+  margin-left: 0;
+  font-size: 0.8em;
+  display: inline;
+  text-align: right;
+  margin:{
+    top: 15px;
+    bottom: 15px;
+  }
+  li {
+    display: inline;
+    color: #888;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    margin: {
+      top:    0;
+      bottom: 0;
+      right:  2px;
+      left:   2px;
+    }
+    padding: {
+      top:    1px;
+      bottom: 1px;
+      right:  5px;
+      left:   5px;
+    }
+  }
+}
+
+.post-list {
+  .post-meta {
+    text-align: right;
+    padding-top: 9px;
+  }
+  [class^=col-] {
+      margin: {
+      bottom: 25px;
+    }
   }
 }

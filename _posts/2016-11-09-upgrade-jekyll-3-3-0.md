@@ -1,6 +1,6 @@
 ---
 title:      "Upgrade to Jekyll 3.3.0"
-categories: articles
+categories: blog
 tags:       jekyll
 ---
 
