@@ -8,7 +8,7 @@ layout: compress
 
   {% include head.html %}
 
-  {% assign body-class = page.permalink | default: 'home' | replace:'/',''  | prepend: 'page-' %}
+  {% assign body-class = page.dir | default: '__post' | replace:'/','' | slice: 2, 100 | trim | default: 'home' | prepend: 'page-' %}
   <body class="{{ body-class }}">
 
     {{ content }}

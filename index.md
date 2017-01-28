@@ -3,7 +3,7 @@ layout: home
 redirect_from: /en
 ---
 
-{{site.title}}
+# {{site.title}}
 
 {% include avatar.html size='medium' %}
 

@@ -70,7 +70,7 @@ sass:
 
 # SOURCE: http://jch.penibelst.de
 compress_html:
-  clippings: all
+  # clippings: all # NOTE: removed because it gives inconsistent results in certain circumstances
   comments: ["<!-- ", " -->"]
   endings: all
   # profile: true

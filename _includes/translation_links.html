@@ -1,0 +1,23 @@
+<ul class="translation-links">
+    {% if page.slug %}
+        {% assign translations = site.posts | where:"slug",page.slug | sort: "path" %}
+    {% else %}
+        {% assign translations = site.pages | where:"name",page.name | sort: "path" %}
+    {% endif %}
+    {% if translations.size > 1 %}
+        {% for translation in translations %}
+            {% if page.slug %}
+                {% assign lang = translation.categories[0] %}
+            {% else %}
+                {% assign lang = translation.dir | slice: 1, 2 | default: "en" %}
+            {% endif %}
+            {% if translation.url == page.url %}
+                <li class="current-translation {{lang}}">{{lang}}</li>
+            {% else %}
+                <li class="{{lang}}"><a href="{{translation.url}}">{{lang}}</a></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <li class="no-translation-placeholder"></li>
+    {% endif %}
+</ul>
