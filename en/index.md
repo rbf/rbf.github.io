@@ -1,7 +1,7 @@
 ---
 layout: home
 permalink: /
-redirect_from: /en
+redirect_from: /en/
 ---
 
 # {{site.title}}
