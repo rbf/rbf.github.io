@@ -3,10 +3,18 @@
   {% assign home_url = '/' %}
 {% else %}
   {% assign home_url = '/' | append: lang | append: '/' %}
+  {% assign home_url_page = site.pages | where:"dir",home_url %}
+  {% if home_url_page.size != 1 %}
+    {% assign home_url = '/' %}
+  {% endif %}
 {% endif %}
 {% if page.categories %}
-  {% assign category_url = page.categories | join: '/' %}
+  {% assign category_url = page.categories | join: '/' | prepend: '/' | append: '/' %}
   {% assign category_name = page.categories[1] %}
+  {% assign category_url_page = site.pages | where:"dir",category_url %}
+  {% if category_url_page.size != 1 %}
+    {% assign category_url = category_name | prepend: '/en/'%}
+  {% endif %}
 {% endif %}
 
 <header class="site-header" role="banner">
