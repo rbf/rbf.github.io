@@ -3,7 +3,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  {% assign current_lang = page.url | slice: 1, 2 %}
+  {% assign current_category = page.url | slice: 4, 100 | remove: '/' %}
+  {% assign page_title = page.title | strip | default: site.data.t[current_lang].category[current_category] | capitalize %}
+
+  <title>{{ site.title | escape }}{% if page_title != '' %} | {{ page_title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">

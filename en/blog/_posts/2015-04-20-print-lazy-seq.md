@@ -1,6 +1,5 @@
 ---
 title:  "Print a lazy seq"
-categories: blog
 tags: code clojure laziness printing
 ---
 

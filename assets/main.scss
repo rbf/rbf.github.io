@@ -16,6 +16,14 @@ body {
   border: none;
     min-height: 56px;
     position: relative;
+  .site-title {
+    &.url-separator {
+      padding: {
+        left: 5px;
+        right: 5px;
+      }
+    }
+  }
 }
 
 .wrapper-centered {

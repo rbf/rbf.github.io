@@ -1,7 +1,6 @@
 ---
-title:      "Upgrade to Jekyll 3.3.0"
-categories: blog
-tags:       jekyll
+title: "Upgrade to Jekyll 3.3.0"
+tags: jekyll
 ---
 
 # Hello upgraded world!

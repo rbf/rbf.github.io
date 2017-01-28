@@ -3,7 +3,8 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% assign current_lang = page.url | slice: 1, 2 %}
+<html lang="{{ current_lang | default: site.lang | default: "en" }}">
 
   {% include head.html %}
 

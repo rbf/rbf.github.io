@@ -58,7 +58,11 @@ defaults:
     values:
       author: 'rbf'
       layout: 'post'
-      lang: 'en'
+  - scope:
+      type: 'pages'
+    values:
+      author: 'rbf'
+      layout: 'default'
 
 
 sass:

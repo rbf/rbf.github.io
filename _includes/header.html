@@ -1,11 +1,29 @@
+{% assign lang = page.url | slice: 1, 2 %}
+{% if lang == 'en' %}
+  {% assign home_url = '/' %}
+{% else %}
+  {% assign home_url = '/' | append: lang | append: '/' %}
+{% endif %}
+{% if page.categories %}
+  {% assign category_url = page.categories | join: '/' %}
+  {% assign category_name = page.categories[1] %}
+{% endif %}
+
 <header class="site-header" role="banner">
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ "/" | relative_url}}">
+    <a class="site-title" href="{{ home_url | relative_url}}">
       {% include avatar.html size='small' %}
       {{ site.title | escape }}
     </a>
+
+    {% if category_url %}
+      <span class="site-title url-separator">/</span>
+      <a class="site-title" href="{{ category_url | relative_url}}">
+        {{ site.data.t[lang].category[category_name] }}
+      </a>
+    {% endif %}
 
     <nav class="site-nav">
       <span class="menu-icon">

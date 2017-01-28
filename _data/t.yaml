@@ -1,0 +1,19 @@
+en:
+  category:
+    blog: blog
+    photo: photo
+
+fr:
+  category:
+    blog: blog
+    photo: photo
+
+es:
+  category:
+    blog: blog
+    photo: foto
+
+ca:
+  category:
+    blog: blog
+    photo: foto

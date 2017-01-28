@@ -1,5 +1,6 @@
 ---
 layout: home
+redirect_from: /en
 ---
 
 {{site.title}}
