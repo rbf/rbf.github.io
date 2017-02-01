@@ -1,0 +1,23 @@
+---
+---
+
+{% assign current_lang = page.url | slice: 1, 2 %}
+{% assign tags = "|" | split: "|" %}
+{% for tag in site.tags %}
+    {% assign tagname = tag | first %}
+    {% assign tags = tags | push: tagname %}
+{% endfor %}
+{% assign tags = tags | sort %}
+
+<div id="tag-index" class="tag-index" style="display: none;">
+    <h1>Tags</h1>
+    {% for tag in tags %}
+    <a href="{{page.url}}#{{tag}}">{{site.data.t[current_lang].tag[tag] | default: tag}} ({{site.tags[tag] | size}})</a>
+    {% endfor %}
+</div>
+{% for tag in tags %}
+<div id="{{tag}}" class="tag-posts-list {{tag}}" style="display: none;">
+    <h1>Tag: {{site.data.t[current_lang].tag[tag] | default: tag | capitalize}}</h1>
+    {% include current_lang_and_category_posts_index.html tag=tag %}
+</div>
+{% endfor %}

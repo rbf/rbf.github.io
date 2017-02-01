@@ -2,6 +2,8 @@ en:
   category:
     blog: blog
     photo: photo
+  tag:
+    jekyll: jekyll
 
 fr:
   category:

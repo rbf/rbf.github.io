@@ -42,6 +42,7 @@ gems:
   - jekyll-mentions       # SOURCE: https://github.com/jekyll/jekyll-mentions
   - jekyll-redirect-from  # SOURCE: https://github.com/jekyll/jekyll-redirect-from
   - jekyll-sitemap        # SOURCE: https://github.com/jekyll/jekyll-sitemap
+  - jekyll-coffeescript   # SOURCE: https://github.com/jekyll/jekyll-coffeescript
 
 exclude:
   - Gemfile

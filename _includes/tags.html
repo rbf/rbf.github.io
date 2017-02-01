@@ -2,7 +2,7 @@
 {% if tags %}
   <ul class="tags" title="tags">
     {% for tag in tags %}
-      <li><span>{{tag}}</span></li>
+      <li><a href="/{{current_lang}}/tags/#{{tag}}">{{site.data.t[current_lang].tag[tag] | default: tag}}</a></li>
     {% endfor %}
   </ul>
 {% endif %}

@@ -7,10 +7,10 @@
   {% assign current_category = page.url | slice: 4, 100 | remove: '/' %}
   {% assign page_title = page.title | strip | default: site.data.t[current_lang].category[current_category] | capitalize %}
 
-  <title>{{ site.title | escape }}{% if page_title != '' %} | {{ page_title | escape }}{% endif %}</title>
+  <title>{{ site.title | escape }}{% if page_title != '' and page_title != '{{site.title}}'  %} | {{ page_title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   {% include favicons.html %}
