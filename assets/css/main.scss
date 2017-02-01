@@ -144,3 +144,11 @@ ul.tags {
     }
   }
 }
+
+.tag {
+  &.current-tag {
+    background-color: #ffc;
+    color: #990;
+    border-color: #990;
+  }
+}

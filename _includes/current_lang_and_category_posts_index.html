@@ -12,7 +12,7 @@
       <span class="post-meta col-2-12">{{ post.date | date: "%b %-d, %Y" }}</span>
       <div class="col-10-12">
         <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        {% include tags.html %}
+        {% include tags.html current_tag=tag %}
       </div>
     </div>
   {% endfor %}
