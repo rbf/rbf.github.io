@@ -1,3 +1,4 @@
+{% assign current_lang = page.url | slice: 1, 2 %}
 {% assign tags = post.tags | default: page.tags %}
 {% if tags %}
   <ul class="tags" title="tags">
