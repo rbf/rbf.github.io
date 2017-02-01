@@ -12,9 +12,9 @@
                 {% assign lang = translation.dir | slice: 1, 2 | default: "en" %}
             {% endif %}
             {% if translation.url == page.url %}
-                <li class="current-translation {{lang}}">{{lang}}</li>
+                <li class="translation-link current-translation {{lang}}">{{lang}}</li>
             {% else %}
-                <li class="{{lang}}"><a href="{{translation.url}}">{{lang}}</a></li>
+                <li class="translation-link {{lang}}"><a href="{{translation.url}}">{{lang}}</a></li>
             {% endif %}
         {% endfor %}
     {% else %}
