@@ -2,8 +2,6 @@
 {% assign tags = post.tags | default: page.tags %}
 {% if tags %}
   <ul class="tags" title="tags">
-    {% for tag in tags %}
-      <li class="tag{% if include.current_tag == tag %} current-tag{% endif %}"><a href="/{{current_lang}}/tags/#{{tag}}">{{site.data.t[current_lang].tag[tag] | default: tag}}</a></li>
-    {% endfor %}
+    {% for tag in tags %}<li class="tag{% if include.current_tag == tag %} current-tag{% endif %}"><a href="/{{current_lang}}/tags/#{{tag}}">{{site.data.t[current_lang].tag[tag] | default: tag}}</a></li>{% endfor %}
   </ul>
 {% endif %}
