@@ -123,6 +123,13 @@ ul.tags {
       right:  5px;
       left:   5px;
     }
+    > a {
+      color: inherit;
+      cursor: default;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }
 
@@ -137,3 +144,9 @@ ul.tags {
     }
   }
 }
+
+// body.page-tags {
+//   .tag-posts-list {
+//     display: none;
+//   }
+// }
