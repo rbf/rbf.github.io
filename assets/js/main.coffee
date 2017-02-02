@@ -3,6 +3,10 @@
 
 do ( $$ = window.rbf ||= {}, $=jQuery ) ->
 
+  # Array prototype extensions
+  $.extend Array.prototype,
+    contains: (thing) -> $.inArray(thing, @) != -1
+
   clearHash = ->
     window.location.hash = '' # NOTE: this triggers a 'hashchange' event
 
@@ -19,6 +23,13 @@ do ( $$ = window.rbf ||= {}, $=jQuery ) ->
   updateTranslationLinks = (tag) ->
     $('.translation-link:not(current-translation) a').attr 'href', (i, val) ->
       val.replace(/#\w*/, '') + tag
+    if tag? and tag != ''
+      $('.translation-link').css('display','none')
+      $("#lang-tags .lang-tags[data-tags*='" + tag.slice(1) + "']").each (i,elem)->
+        langWithTag = $(elem).data('lang')
+        $('.translation-link.' + langWithTag).css('display','')
+      if $('.translation-link').filter(-> $(@).css('display') != 'none').length == 1
+        $('.translation-link').css('display','none')
 
   updateElemsToShow = (e) ->
     if $('body.page-tags').length == 1
@@ -32,6 +43,7 @@ do ( $$ = window.rbf ||= {}, $=jQuery ) ->
           clearHash()
       else
         showOnlyTagIndex()
+        updateTranslationLinks ''
 
   updateElemsToShow()
 
