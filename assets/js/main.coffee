@@ -49,3 +49,6 @@ do ( $$ = window.rbf ||= {}, $=jQuery ) ->
 
   $(window).on 'hashchange', (e) ->
     updateElemsToShow()
+
+  # Make all non-local links open in new tab
+  $("a[href^=http]").attr("target", "_blank");
