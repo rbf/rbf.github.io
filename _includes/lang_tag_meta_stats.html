@@ -1,30 +1,27 @@
-{% if page.name == 'tags.html' %}
-    {% assign isTagsPage = true %}
-    <span style="display:none;" id="lang-tags">
-        {% assign tags = "|" | split: "|" %}
-        {% for tag in site.tags %}
-            {% assign tagname = tag | first %}
-            {% assign tags = tags | push: tagname %}
-        {% endfor %}
-        {% assign tags = tags | sort %}
-        {% assign langs = "|" | split: "|" %}
-        {% for category in site.categories %}
-            {% assign category_name = category | first %}
-            {% assign category_name_length = category_name | size %}
-            {% if category_name_length == 2 %}
-                {% assign langs = langs | push: category_name %}
+<span style="display:none;" id="lang-tags">
+    {% assign tags = "|" | split: "|" %}
+    {% for tag in site.tags %}
+        {% assign tagname = tag | first %}
+        {% assign tags = tags | push: tagname %}
+    {% endfor %}
+    {% assign tags = tags | sort %}
+    {% assign langs = "|" | split: "|" %}
+    {% for category in site.categories %}
+        {% assign category_name = category | first %}
+        {% assign category_name_length = category_name | size %}
+        {% if category_name_length == 2 %}
+            {% assign langs = langs | push: category_name %}
+        {% endif %}
+    {% endfor %}
+    {% assign langs = langs | sort %}
+    {% for lang in langs %}
+        {% assign lang_tags = "|" | split: "|" %}
+        {% for tag in tags %}
+            {% assign tag_posts_count = site.categories[lang] | where_exp:"post","post.tags contains tag" | size %}
+            {% if tag_posts_count > 0 %}
+                {% assign lang_tags = lang_tags | push: tag %}
             {% endif %}
         {% endfor %}
-        {% assign langs = langs | sort %}
-        {% for lang in langs %}
-            {% assign lang_tags = "|" | split: "|" %}
-            {% for tag in tags %}
-                {% assign tag_posts_count = site.categories[lang] | where_exp:"post","post.tags contains tag" | size %}
-                {% if tag_posts_count > 0 %}
-                    {% assign lang_tags = lang_tags | push: tag %}
-                {% endif %}
-            {% endfor %}
-            <span id="{{lang}}-tags" class="lang-tags" data-lang='{{lang}}' data-tags='["{{lang_tags | join: '","'}}"]'></span>
-        {% endfor %}
-    </span>
-{% endif %}
+        <span id="{{lang}}-tags" class="lang-tags" data-lang='{{lang}}' data-tags='["{{lang_tags | join: '","'}}"]'></span>
+    {% endfor %}
+</span>
