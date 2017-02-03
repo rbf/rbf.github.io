@@ -6,6 +6,10 @@
 {% endfor %}
 {% assign tags = tags | sort %}
 
+<noscript>
+  <em>Due to technical limitations this page can only be properly displayed using JavaScript.<br>Please activate JavaScript to see the tag pages.</em>
+</noscript>
+
 <div id="tag-index" class="tag-index" style="display: none;">
     <h1>Tags</h1>
     {% for tag in tags %}
