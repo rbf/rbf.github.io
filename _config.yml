@@ -20,7 +20,7 @@ safe: true
 
 title: rbf.io
 subtitle: rather be functional
-email: hi@rbf.io
+email_user: hi
 description: >
   We make functional software.
 # baseurl: "/blog" # the subpath of your site, e.g. /blog

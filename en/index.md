@@ -13,7 +13,8 @@ Switzerland].
 
 We make functional software and [write articles](/blog).
 
-<{{site.email}}>
+{% include email within_tag='p'%}
+
 
 @rbf
 

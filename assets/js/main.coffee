@@ -8,6 +8,19 @@ jQuery ->
     $.extend Array.prototype,
       contains: (thing) -> $.inArray(thing, @) != -1
 
+    # SOURCE: http://stackoverflow.com/questions/483212/effective-method-to-hide-email-from-spam-bots
+    # SOURCE: http://stackoverflow.com/questions/748780/best-way-to-obfuscate-an-e-mail-address-on-a-website
+    # SOURCE: http://stackoverflow.com/questions/5041494/selecting-and-manipulating-css-pseudo-elements-such-as-before-and-after-usin
+    # SOURCE: http://stackoverflow.com/questions/2170484/shouldnt-we-use-noscript-tag
+    # SOURCE: https://www.labnol.org/internet/hide-email-address-web-pages/28364/
+    # SOURCE: http://joemaller.com/js-mailer.shtml
+    # SOURCE: http://techblog.tilllate.com/2008/07/20/ten-methods-to-obfuscate-e-mail-addresses-compared/
+    $('body').on 'click', 'x-rbfe', (e) ->
+      document.location = 'mai' + 'lto:' + window.xrbfe
+        .replace(/YYYYY/,'\u0040')
+        .replace(/XXXXX/,'\u002E')
+      false
+
     clearHash = ->
       window.location.hash = '' # NOTE: this triggers a 'hashchange' event
 
@@ -54,13 +67,13 @@ jQuery ->
     $("a[href^=http]").attr("target", "_blank");
 
     # SOURCE: https://github.com/basimilch/basimilch.github.io/blob/c3c8a6b/javascripts/custom.js#L21-L31
-    $('[data-href]').click (e) ->
-      href = $(@).data('href');
+    $('body').on 'click', '[data-href]', (e) ->
+      href = $(@).data 'href'
       if $(e.target).closest('a').length > 0
         # Let the a tag handle the link instead.
       else if e.metaKey or href.match(/^http/)
         # Open in new window.
-        window.open(href, '_blank');
+        window.open href, '_blank'
       else
-        document.location = href;
+        document.location = href
       false
