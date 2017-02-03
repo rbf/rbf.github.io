@@ -10,11 +10,12 @@ layout: compress
 
   {% assign body-class = page.dir | default: '__post' | replace:'/','' | slice: 2, 100 | trim | default: 'home' | prepend: 'page-' %}
   <body class="{{ body-class }}">
-
-    {{ content }}
+    <div class="page-wrap">
+        {{ content }}
+    </div>
+    {% include site_footer.html %}
     <script src="/assets/vendor/js/jquery-3.1.1.slim.min.js"></script>
     <script src="/assets/js/main.js"></script>
     {% include lang_tag_meta_stats.html %}
   </body>
-
 </html>

@@ -3,6 +3,9 @@
 ---
 @import "minima";
 @import "simplegrid";
+
+$footer-height: 36px;
+
 body {
   background-color: white;
   &.page-home {
@@ -60,7 +63,7 @@ body {
   display: table;
   position: absolute;
   text-align: center;
-  height: 100%;
+  height: calc(100% - #{$footer-height} - 30px);
   width: 100%;
   .content {
     display: table-cell;
@@ -156,19 +159,55 @@ ul.tags {
 // SOURCE:https://github.com/basimilch/basimilch.github.io/blob/c3c8a6b7/css/custom.scss#L246-L263
 $ascii-open-in-new-tab: "\27a0";
 // $ascii-open-in-new-tab: "\261e";
-a[target='_blank'],
-[data-href^='http'] {
+a[target='_blank']:not(.no-link-in-new-tab-arrow),
+[data-href^='http']:not(.no-link-in-new-tab-arrow) {
   &:hover::after {
     content: $ascii-open-in-new-tab;
-    font-size: 30px;
+    font-size: 48px;
+    opacity: .3;
     font-style: normal;
     font-weight: lighter;
     display: inline-block;
     text-decoration: none;
     position: fixed;
     right: 5%;
-    bottom: 3%;
+    bottom: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+// SOURCE: http://codepen.io/chriscoyier/pen/uwJjr/
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: calc(100% - #{$footer-height} );
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: $footer-height
+}
+.site-footer {
+  opacity: .5;
+  &:hover {
+    opacity: inherit;
+  }
+  cursor: default;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  color: #999;
+  font-size: .8em;
+  text-align: center;
+}
+
+@media handheld, only screen and (max-width: 767px) {
+  .hidden-sm {
+    display: none;
   }
 }

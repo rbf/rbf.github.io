@@ -14,6 +14,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+timezone: Asia/Tokyo
+safe: true
+
 title: rbf.io
 subtitle: rather be functional
 email: hi@rbf.io
@@ -27,7 +31,6 @@ github_username: rbf
 # Build settings
 markdown: kramdown
 permalink: pretty # SOURCE: https://jekyllrb.com/docs/permalinks/#built-in-permalink-styles
-timezone: Europa/Zurich
 
 # SOURCE: https://github.com/planetjekyll/awesome-jekyll-themes
 theme: minima # default
