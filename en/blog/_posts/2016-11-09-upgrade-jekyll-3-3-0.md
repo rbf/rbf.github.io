@@ -1,6 +1,8 @@
 ---
 title: "Upgrade to Jekyll 3.3.0"
 tags: jekyll
+redirect_from:
+    - /2016/11/09/upgrade-jekyll-3-3-0/
 ---
 
 # Hello upgraded world!
