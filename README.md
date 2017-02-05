@@ -1,4 +1,4 @@
-rbf.github.io
-=============
+rbf.io
+======
 
-rbf page
+This is my website served at http://rbf.io.
