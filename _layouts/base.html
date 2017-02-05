@@ -14,8 +14,10 @@ layout: compress
         {{ content }}
     </div>
     {% include site_footer.html %}
-    <script src="/assets/vendor/js/jquery-3.1.1.slim.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+
+    <script src="{% include busted_url url="/assets/vendor/js/jquery-3.1.1.slim.min.js" %}"></script>
+    <script src="{% include busted_url url="/assets/js/main.js" %}"></script>
+
     {% include lang_tag_meta_stats.html %}
   </body>
 </html>

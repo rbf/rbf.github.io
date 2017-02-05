@@ -8,15 +8,21 @@
   {% assign page_title = page.title | strip | default: site.data.t[current_lang].category[current_category] | capitalize %}
 
   <title>{{ site.title | escape }}{% if page_title != '' and page_title != '{{site.title}}'  %} | {{ page_title | escape }}{% endif %}</title>
+
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+
+  <link rel="stylesheet" href="{% include busted_url url="/assets/css/main.css" %}">
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
   {% include translation_alternate_head_links.html %}
   {% include favicons.html %}
-  {% if jekyll.environment == 'production' and site.google_analytics %}
-  {% include google-analytics.html %}
-  {% endif %}
+
   {% include email_script %}
+
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
 </head>
