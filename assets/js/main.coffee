@@ -15,7 +15,7 @@ jQuery ->
     # SOURCE: https://www.labnol.org/internet/hide-email-address-web-pages/28364/
     # SOURCE: http://joemaller.com/js-mailer.shtml
     # SOURCE: http://techblog.tilllate.com/2008/07/20/ten-methods-to-obfuscate-e-mail-addresses-compared/
-    $('body').on 'click', 'x-rbfe', (e) ->
+    $('x-rbfe').click (e) ->
       document.location = 'mai' + 'lto:' + window.xrbfe
         .replace(/YYYYY/,'\u0040')
         .replace(/XXXXX/,'\u002E')
