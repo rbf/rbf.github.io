@@ -6,6 +6,8 @@
 
 $footer-height: 36px;
 
+$font-color-post-summary: #333;
+
 body {
   background-color: white;
   &.page-home {
@@ -144,6 +146,16 @@ ul.tags {
   [class^=col-] {
       margin: {
       bottom: 25px;
+    }
+  }
+}
+
+.post {
+  .post-summary {
+    font-style: italic;
+    color: $font-color-post-summary;
+    margin: {
+      bottom: 3em;
     }
   }
 }

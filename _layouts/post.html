@@ -5,9 +5,21 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    {% if page.subtitle %}
+      <h2 class="post-subtitle" itemprop="alternativeHeadline" itemscope itemtype="https://schema.org/alternativeHeadline">{{ page.subtitle | markdownify }}</h2>
+    {% endif %}
+
     {% include tags.html %}
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %}<span class="itemprop" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}{% if page.tags %}<span class="itemprop" itemprop="keywords" itemscope itemtype="https://schema.org/keywords">{{ page.tags | array_to_sentence_string | replace: ' and ', ' '}}</span>{% endif %}</p>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %}<span class="itemprop" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}{% if page.tags %}<span class="itemprop" itemprop="keywords" itemscope itemtype="https://schema.org/keywords">{{ page.tags | array_to_sentence_string | replace: ' and ', ' '}}</span>{% endif %}<span class="itemprop" itemprop="wordCount" itemscope itemtype="https://schema.org/wordCount">{{ page.content | number_of_words }}</span></p>
   </header>
+
+  {% if page.summary %}
+    <div class="post-summary" itemprop="about" itemscope itemtype="https://schema.org/about">
+      <p>
+        {{ page.summary }}
+      </p>
+    </div>
+  {% endif %}
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
