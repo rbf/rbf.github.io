@@ -160,6 +160,17 @@ ul.tags {
   }
 }
 
+.section-title-link {
+  cursor: pointer;
+  opacity: .8;
+  font-size: .5em;
+  margin: {
+    left: .5em;
+  }
+  top: -.1em;
+  position: relative;
+}
+
 .tag {
   &.current-tag {
     background-color: #ffc;
@@ -218,6 +229,9 @@ html, body {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
 @media handheld, only screen and (max-width: 767px) {
   .hidden-sm {
     display: none;

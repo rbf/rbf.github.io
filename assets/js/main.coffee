@@ -77,3 +77,12 @@ jQuery ->
       else
         document.location = href
       false
+
+  # Add direct links on hover over section titles
+  $('h1[id],h2[id],h3[id],h4[id]')
+    .each ->
+      $elem = $(@)
+      directLinkHTML = '<a class="section-title-link hidden" href="#' + $elem.attr('id') + '">[link]</span></a>'
+      $elem.append(directLinkHTML)
+    .hover ->
+      $(@).find(".section-title-link").toggleClass("hidden")
