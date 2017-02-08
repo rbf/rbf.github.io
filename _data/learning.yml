@@ -65,6 +65,10 @@ teacher:
     name: Susan Simkins
     url:  https://app.pluralsight.com/profile/author/susan-simkins
 
+  jose-valim:
+    name: Jose Valim
+    url:  https://app.pluralsight.com/profile/author/jose-valim
+
 
 organisation:
 
