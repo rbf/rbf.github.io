@@ -25,4 +25,9 @@ summary: >
 Very short and to the point. It's a very nice introduction or
 refresh to proper positioning of HTML elements, specially
 regarding centering of elements. I practiced what I learnt in
-this course in [this pen](http://codepen.io/rbf/pen/mRjpKK).
+this course in [this pen](http://codepen.io/rbf/pen/mRjpKK):
+
+<br>
+
+<p data-height="415" data-theme-id="0" data-slug-hash="mRjpKK" data-default-tab="css,result" data-user="rbf" data-embed-version="2" data-pen-title="CSS Positioning 03" data-preview="false" class="codepen">See the Pen <a href="http://codepen.io/rbf/pen/mRjpKK/">CSS Positioning 03</a> by rbf (<a href="http://codepen.io/rbf">@rbf</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
