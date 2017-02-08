@@ -30,7 +30,7 @@
     {% if category_url %}
       <span class="site-title url-separator">/</span>
       <a class="site-title" href="{{ category_url | relative_url}}">
-        {{ site.data.t[lang].category[category_name] }}
+        {{ site.data.t[lang].category[category_name] | default: category_name }}
       </a>
     {% endif %}
   {% endif %}

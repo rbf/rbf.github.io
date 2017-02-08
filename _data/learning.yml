@@ -1,0 +1,81 @@
+providers:
+
+  safari:
+    name: Safari
+    url:  https://www.safaribooksonline.com
+
+  coursera:
+    name: Coursera
+    url:  https://www.coursera.org
+
+  pluralsight:
+    name: Pluralsight
+    url:  https://pluralsight.com
+
+
+prices:
+
+  free:
+    free: yes
+    description:
+      en: >
+        The whole course can be followed completely free of charge online.
+
+  free-with-payed-certificate:
+    free: partially
+    currency: USD
+    description:
+      en: >
+        The whole course can be followed completely free of charge online
+        but the optional certificate of completion has to be purchased.
+
+  requires-subscription-with-provider:
+    free: no
+    description:
+      en: >
+        The curse content is only available with a payed subscription with
+        the provider.
+
+
+teachers:
+
+  michael-hartl:
+    name: Michael Hartl
+    url:  https://www.railstutorial.org
+    homepage: http://www.michaelhartl.com
+
+  andrew-ng:
+    name: Andrew Ng
+    url:  http://online.stanford.edu/instructors/andrew-ng
+    homepage: http://www.andrewng.org
+
+  arvind-narayanan:
+    name: Arvind Narayanan
+    url:  https://www.cs.princeton.edu/people/profile/arvindn
+    homepage: http://randomwalker.info
+
+  samer-buna:
+    name: Samer Buna
+    url:  https://app.pluralsight.com/profile/author/samer-buna
+
+  susan-simkins:
+    name: Susan Simkins
+    url:  https://app.pluralsight.com/profile/author/susan-simkins
+
+
+organisations:
+
+  stanford-university:
+    name: Stanford University
+    url:  http://www.stanford.edu
+    type: university
+
+  princeton-university:
+    name: Princeton University
+    url:  http://www.princeton.edu
+    type: university
+
+  addison-wesley-professional:
+    name: Addison-Wesley Professional
+    url:  http://www.pearsonschool.com
+    type: publisher

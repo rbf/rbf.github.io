@@ -2,7 +2,6 @@
 redirect_from: /learning/
 ---
 
-# Courses
+# Learning
 
-{% include courses_for_current_lang.html %}
-
+{% include current_lang_and_category_posts_index.html %}
