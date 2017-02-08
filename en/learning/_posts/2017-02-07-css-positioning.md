@@ -5,7 +5,6 @@ teacher:      susan-simkins
 provider:     pluralsight
 price:        requires-subscription-with-provider
 start_date:   2017-02-06
-end_date:     2017-02-07
 type:         online
 support:      video
 level:        beginner
