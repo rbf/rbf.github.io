@@ -1,6 +1,6 @@
 ---
 title:        Bitcoin and Cryptocurrency Technologies
-url:          https://www.coursera.org/learn/cryptocurrency
+content_url:  https://www.coursera.org/learn/cryptocurrency
 teacher:      arvind-narayanan
 organisation: princeton-university
 provider:     coursera
@@ -10,10 +10,13 @@ type:         online
 support:      video scripts code
 level:        beginner
 myrating:
-duration:     11 weeks
 release_date: 2016-12-20
-tags: bitcoin cryptography blockchain
-description:
+tags:         bitcoin cryptography blockchain
+duration:
+  approx:
+    value:    11
+    unit:     weeks
+summary: >
     After this course, you’ll know everything you need to be able to
     separate fact from fiction when reading claims about Bitcoin and
     other cryptocurrencies. You’ll have the conceptual foundations

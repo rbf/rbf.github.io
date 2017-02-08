@@ -1,19 +1,22 @@
-providers:
+provider:
 
   safari:
     name: Safari
     url:  https://www.safaribooksonline.com
+    logo: /images/logos/safari.png
 
   coursera:
     name: Coursera
     url:  https://www.coursera.org
+    logo: /images/logos/coursera.png
 
   pluralsight:
     name: Pluralsight
     url:  https://pluralsight.com
+    logo: /images/logos/pluralsight.png
 
 
-prices:
+price:
 
   free:
     free: yes
@@ -37,7 +40,7 @@ prices:
         the provider.
 
 
-teachers:
+teacher:
 
   michael-hartl:
     name: Michael Hartl
@@ -63,7 +66,7 @@ teachers:
     url:  https://app.pluralsight.com/profile/author/susan-simkins
 
 
-organisations:
+organisation:
 
   stanford-university:
     name: Stanford University

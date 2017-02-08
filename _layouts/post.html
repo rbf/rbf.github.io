@@ -10,15 +10,20 @@ layout: default
     {% endif %}
 
     {% include tags.html %}
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %}<span class="itemprop" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}{% if page.tags %}<span class="itemprop" itemprop="keywords" itemscope itemtype="https://schema.org/keywords">{{ page.tags | array_to_sentence_string | replace: ' and ', ' '}}</span>{% endif %}<span class="itemprop" itemprop="wordCount" itemscope itemtype="https://schema.org/wordCount">{{ page.content | number_of_words }}</span></p>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+    <span class="post-meta itemprops">
+      {% if page.author %}<span class="itemprop" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}{% if page.tags %}<span class="itemprop" itemprop="keywords" itemscope itemtype="https://schema.org/keywords">{{ page.tags | array_to_sentence_string | replace: ' and ', ' '}}</span>{% endif %}<span class="itemprop" itemprop="wordCount" itemscope itemtype="https://schema.org/wordCount">{{ page.content | number_of_words }}</span>
+    </span>
   </header>
 
-  {% if page.summary %}
-    <div class="post-summary" itemprop="about" itemscope itemtype="https://schema.org/about">
-      <p>
+  {% if page.categories contains "learning" %}
+    {% include course_info.html %}
+  {% else %}
+    {% if page.summary %}
+      <p class="post-summary" itemprop="about" itemscope itemtype="https://schema.org/about">
         {{ page.summary }}
       </p>
-    </div>
+    {% endif %}
   {% endif %}
 
   <div class="post-content" itemprop="articleBody">

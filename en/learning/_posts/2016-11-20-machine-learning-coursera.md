@@ -1,6 +1,6 @@
 ---
 title:        Machine Learning
-url:          https://www.coursera.org/learn/machine-learning
+content_url:  https://www.coursera.org/learn/machine-learning
 teacher:      andrew-ng
 organisation: stanford-university
 provider:     coursera
@@ -10,13 +10,15 @@ type:         online
 support:      video scripts code
 level:        beginner
 myrating:     5/5
-duration:     11 weeks
 release_date: 2011
 certificate_url: https://pinboard.in/u:rbf/b:4b6b6875eb55
 tags:         machinelearning ai
-description: >
-  This course provides a broad introduction to machine learning, datamining,
-  and statistical pattern recognition.
+duration:
+  approx:
+    value:    11
+    unit:     weeks
+summary: >
+  This course provides a broad introduction to machine learning, datamining, and statistical pattern recognition.
 ---
 
 This already famous introductory MOOC on Machine Learning was first taught

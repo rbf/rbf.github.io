@@ -1,0 +1,47 @@
+{% assign lang = page.url | slice: 1, 2 %}
+{% assign t = site.data.t[lang].word %}
+{% assign learning = site.data.learning %}
+{% assign teacher = learning.teacher[page.teacher] %}
+{% assign provider = learning.provider[page.provider] %}
+{% assign organisation = learning.organisation[page.organisation] %}
+{% assign price = learning.price[page.price].description[lang] %}
+{% assign start_date = page.start_date | date: '%b %Y' %}
+{% assign end_date = page.date | date: '%b %Y' %}
+{% assign duration = page.duration.approx.value | append: ' ' | append: t[page.duration.approx.unit] %}
+
+<div class="course-info">
+    <div class="course-header">
+        <a class="title" href="{{page.content_url}}">
+            <img class="provider-logo" src="{{provider.logo}}" alt="{{provider.name}} logo">
+        </a>
+        <p class="headline">
+            <a class="title" href="{{page.content_url}}">{{page.title}}</a>
+            {% if teacher.name %}
+                {{t.by}} <a class="teacher" href="{{teacher.url}}">{{teacher.name}}</a>
+            {% endif %}
+        </p>
+        <p class="meta-info">
+            <span class="duration">{{t.approx | capitalize }} {{duration}}</span>
+            {% if provider.name %}
+                {{t._on}} <a class="provider" href="{{provider.url}}">{{provider.name}}</a>
+            {% endif %}
+            ●
+            {% if start_date == end_date %}
+                <span class="dates">{{t.done_on | capitalize}} {{start_date}}</span>
+            {% else %}
+                <span class="dates">{{t.done_between | capitalize}} {{start_date}} {{t.and}} {{end_date}}</span>
+            {% endif %}
+        </p>
+    </div>
+    {% if page.subtitle %}
+        <p class="subtitle">
+            {{ page.subtitle | strip }}
+        </p>
+    {% endif %}
+    <p class="summary">
+        {{ page.summary | strip }}
+    </p>
+    <p class="price">
+        {{price}}
+    </p>
+</div>

@@ -1,6 +1,6 @@
 ---
 title:        "React.js: Getting Started"
-url:          https://app.pluralsight.com/library/courses/react-js-getting-started
+content_url:  https://app.pluralsight.com/library/courses/react-js-getting-started
 teacher:      samer-buna
 provider:     pluralsight
 price:        requires-subscription-with-provider
@@ -9,9 +9,13 @@ type:         online
 support:      video
 level:        beginner
 myrating:     5/5
-duration:     01:29h
 release_date: 2015-06-13
 tags:         code html javascript webdev react
+duration:
+  exact:      01:29h
+  approx:
+    value:    1.5
+    unit:     hours
 summary: >
   Learn the basics of React.js, and build an in-browser, math
   skills kids' game from scratch with it.

@@ -1,6 +1,7 @@
 ---
-title:        "Ruby on Rails Tutorial: Learn Web Development with Rails, Third Edition"
-url:          https://www.safaribooksonline.com/library/view/ruby-on-rails/9780134077734/
+title:        "Ruby on Rails Tutorial"
+subtitle:     "Learn Web Development with Rails, Third Edition"
+content_url:  https://www.safaribooksonline.com/library/view/ruby-on-rails/9780134077734/
 original_url: https://www.railstutorial.org
 isbn:         9780134077734
 teacher:      michael-hartl
@@ -12,10 +13,13 @@ type:         online
 support:      video ebook
 level:        beginner
 myrating:     5/5
-duration:     15 h
 release_date: 2015-04-01
 tags:         code html webdev rails ruby
-description: >
+duration:
+  approx:
+    value:    15
+    unit:     hours
+summary: >
   The Ruby on Rails Tutorial LiveLessons, Third Edition, is the
   best-selling complete video training course on web development
   with Rails, the popular web framework for building dynamic,

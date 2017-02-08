@@ -1,6 +1,6 @@
 ---
 title:        CSS Positioning
-url:          https://app.pluralsight.com/library/courses/css-positioning-1834
+content_url:  https://app.pluralsight.com/library/courses/css-positioning-1834
 teacher:      susan-simkins
 provider:     pluralsight
 price:        requires-subscription-with-provider
@@ -10,10 +10,14 @@ type:         online
 support:      video
 level:        beginner
 myrating:     5/5
-duration:     00:50h
 release_date: 2014-10-26
 tags:         css html webdev
-description: >
+duration:
+  exact:      00:50h
+  approx:
+    value:    1
+    unit:     hour
+summary: >
   Understanding CSS positioning can be tricky, especially for beginners
   to CSS. Software required: Brackets, Google Chrome.
 ---

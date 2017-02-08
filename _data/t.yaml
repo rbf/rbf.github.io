@@ -4,8 +4,20 @@ en:
     photo: photo
   tag:
     jekyll: jekyll
-  courses:
+  word:
     by: by
+    _on: 'on' # 'on' without quotes is a keyword equivalent to 'true'
+    duration: duration
+    approx: about
+    done_on: done on
+    done_between: done between
+    and: and
+    hour: hour
+    hours: hours
+    day: day
+    days: days
+    week: week
+    weeks: weeks
 
 fr:
   category:
