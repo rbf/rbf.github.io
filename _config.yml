@@ -20,6 +20,7 @@ safe: true
 
 title: rbf.io
 subtitle: rather be functional
+lang: en
 email_user: hi
 description: >
   We make functional software.

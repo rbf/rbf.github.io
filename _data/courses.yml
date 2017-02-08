@@ -1,0 +1,262 @@
+providers:
+
+  - &safari
+    name: Safari
+    url:  https://www.safaribooksonline.com
+
+  - &coursera
+    name: Coursera
+    url:  https://www.coursera.org
+
+  - &pluralsight
+    name: Pluralsight
+    url:  https://pluralsight.com
+
+
+prices:
+
+  - &free
+    free: yes
+    description:
+      en: >
+        The whole course can be followed completely free of charge online.
+
+  - &free-with-payed-certificate
+    free: partially
+    currency: USD
+    description:
+      en: >
+        The whole course can be followed completely free of charge online
+        but the optional certificate of completion has to be purchased.
+
+  - &requires-subscription-with-provider
+    free: no
+    description:
+      en: >
+        The curse content is only available with a payed subscription with
+        the provider.
+
+
+teachers:
+
+  - &michael-hartl
+    name: Michael Hartl
+    url:  https://www.railstutorial.org
+    homepage: http://www.michaelhartl.com
+
+  - &andrew-ng
+    name: Andrew Ng
+    url:  http://online.stanford.edu/instructors/andrew-ng
+    homepage: http://www.andrewng.org
+
+  - &arvind-narayanan
+    name: Arvind Narayanan
+    url:  https://www.cs.princeton.edu/people/profile/arvindn
+    homepage: http://randomwalker.info
+
+  - &samer-buna
+    name: Samer Buna
+    url:  https://app.pluralsight.com/profile/author/samer-buna
+
+  - &susan-simkins
+    name: Susan Simkins
+    url:  https://app.pluralsight.com/profile/author/susan-simkins
+
+
+organisations:
+
+  - &stanforduniversity
+    name: Stanford University
+    url:  http://www.stanford.edu
+    type: university
+
+  - &princeton-university
+    name: Princeton University
+    url:  http://www.princeton.edu
+    type: university
+
+  - &addison-wesley-professional
+    name: Addison-Wesley Professional
+    url:  http://www.pearsonschool.com
+    type: publisher
+
+courses:
+
+  - title:        "Ruby on Rails Tutorial: Learn Web Development with Rails, Third Edition"
+    url:          https://www.safaribooksonline.com/library/view/ruby-on-rails/9780134077734/
+    original_url: https://www.railstutorial.org
+    isbn:         9780134077734
+    teacher:      *michael-hartl
+    organisation: *addison-wesley-professional
+    provider:     *safari
+    price:        *requires-subscription-with-provider
+    start_date:   2014-08-15
+    end_date:     2014-08-30
+    type:         online
+    support:
+      - video
+      - ebook
+    level:        beginner
+    myrating:     5/5
+    duration:     15 h
+    release_date: 2015-04-01
+    # certificate_url:
+    tags:
+      - html
+      - webdev
+      - rails
+      - ruby
+    description:
+      en: >
+        The Ruby on Rails Tutorial LiveLessons, Third Edition, is the
+        best-selling complete video training course on web development
+        with Rails, the popular web framework for building dynamic,
+        database-backed web applications. You will learn Rails by
+        example by building a substantial sample application from
+        scratch.
+    comment:
+      en: >
+        This fantastic course was my introduction to both [ruby](https://www.ruby-lang.org/)
+        and [Ruby on Rails](http://rubyonrails.org). The corresponding
+        [ebook](https://www.railstutorial.org/book) is freely available online.
+        I carefully went through this extensive video tutorial in order to build
+        the online platform for [basimil.ch](https://github.com/basimilch/basimilch-app).
+
+
+  - title:        Machine Learning
+    url:          https://www.coursera.org/learn/machine-learning
+    # original_url:
+    # isbn:
+    teacher:      *andrew-ng
+    organisation: *stanforduniversity
+    provider:     *coursera
+    price:
+      <<: *free-with-payed-certificate
+      amount:     80
+    start_date:   2016-09-08
+    end_date:     2016-11-20
+    type:         online
+    support:
+      - video
+      - scripts
+      - code
+    level:        beginner
+    myrating:     5/5
+    duration:     11 weeks
+    release_date: 2011
+    certificate_url: https://pinboard.in/u:rbf/b:4b6b6875eb55
+    tags:
+      - machinelearning
+    description:
+      en: >
+        This course provides a broad introduction to machine learning, datamining,
+        and statistical pattern recognition.
+    comment:
+      en: >
+        This already famous introductory MOOC on Machine Learning was first taught
+        in 2011 and led to the
+        [founding of Coursera itself](https://blog.coursera.org/a-personal-message-from-co-founder-andrew-ng/).
+        It was my first proper MOOC and enjoyed it a lot. The required weekly commitment
+        including the programming exercises was between 3 to 6h.
+
+  - title:        Bitcoin and Cryptocurrency Technologies
+    url:          https://www.coursera.org/learn/cryptocurrency
+    # original_url:
+    # isbn:
+    teacher:      *arvind-narayanan
+    organisation: *princeton-university
+    provider:     *coursera
+    price:        *free
+    start_date:   2017-01-23
+    end_date:
+    type:         online
+    support:
+      - video
+      - scripts
+      - code
+    level:        beginner
+    myrating:
+    duration:     11 weeks
+    release_date: 2016-12-20
+    # certificate_url:
+    tags:
+      - bitcoin
+      - cryptography
+      - blockchain
+    description:
+      en: >
+        After this course, you’ll know everything you need to be able to
+        separate fact from fiction when reading claims about Bitcoin and
+        other cryptocurrencies. You’ll have the conceptual foundations
+        you need to engineer secure software that interacts with the
+        Bitcoin network. And you’ll be able to integrate ideas from
+        Bitcoin in your own projects.
+    comment:
+
+  - title:        "React.js: Getting Started"
+    url:          https://app.pluralsight.com/library/courses/react-js-getting-started
+    # original_url:
+    # isbn:
+    teacher:      *samer-buna
+    # organisation:
+    provider:     *pluralsight
+    price:        *requires-subscription-with-provider
+    start_date:   2017-02-05
+    end_date:     2017-02-06
+    type:         online
+    support:
+      - video
+    level:        beginner
+    myrating:     5/5
+    duration:     01:29h
+    release_date: 2015-06-13
+    # certificate_url:
+    tags:
+      - html
+      - javascript
+      - webdev
+      - react
+    description:
+      en: >
+        Learn the basics of React.js, and build an in-browser, math
+        skills kids' game from scratch with it.
+    comment:
+      en: >
+        Very short and to the point. It uses _traditional_
+        [ES5](https://johnpapa.net/es5-es2015-typescript/) javascript. It's a very
+        nice introduction to [react.js](https://facebook.github.io/react/), assuming
+        good knowledge of html, css and javascript. I practiced what I learnt in this
+        course in [this pen](http://codepen.io/rbf/pen/dNKwKm).
+
+  - title:        CSS Positioning
+    url:          https://app.pluralsight.com/library/courses/css-positioning-1834
+    # original_url:
+    # isbn:
+    teacher:      *susan-simkins
+    # organisation:
+    provider:     *pluralsight
+    price:        *requires-subscription-with-provider
+    start_date:   2017-02-06
+    end_date:     2017-02-07
+    type:         online
+    support:
+      - video
+    level:        beginner
+    myrating:     5/5
+    duration:     00:50h
+    release_date: 2014-10-26
+    # certificate_url:
+    tags:
+      - css
+      - html
+      - webdev
+    description:
+      en: >
+        Understanding CSS positioning can be tricky, especially for beginners
+        to CSS. Software required: Brackets, Google Chrome.
+    comment:
+      en: >
+        Very short and to the point. It's a very nice introduction or
+        refresh to proper positioning of HTML elements, specially
+        regarding centering of elements. I practiced what I learnt in
+        this course in [this pen](http://codepen.io/rbf/pen/mRjpKK).

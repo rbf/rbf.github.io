@@ -4,6 +4,8 @@ en:
     photo: photo
   tag:
     jekyll: jekyll
+  courses:
+    by: by
 
 fr:
   category:

@@ -1,0 +1,22 @@
+{% assign lang = page.url | slice: 1, 2 %}
+{% assign lang = page.url | slice: 1, 2 %}
+{% assign courses = site.data.courses.courses | sort: 'end_date' %}
+
+{% for course in courses %}
+{% assign slug = course.start_date | date: "%Y%m%d-" | append: course.title | truncatewords: 5 | slugify %}
+
+{::options parse_block_html="true" /}
+<div class="course-info">
+<h2 id="{{slug}}">{{course.title}}</h2>
+<a href="{{course.url}}">site</a>
+{{site.data.t[lang].courses.by}} <a href="{{course.teacher.url}}">{{course.teacher.name}}</a>
+{% assign description = course.description[lang] | default: course.description[site.lang] %}
+{% if description %}
+<p class="description">{{description}}</p>
+{% endif %}
+{% assign comment = course.comment[lang] | default: course.comment[site.lang] %}
+{% if comment %}
+<p class="comment">{{comment}}</p>
+{% endif %}
+</div>
+{% endfor %}
