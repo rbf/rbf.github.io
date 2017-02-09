@@ -1,7 +1,7 @@
 {% assign lang = page.url | slice: 1, 2 %}
 {% assign t = site.data.t[lang].word %}
 {% assign learning = site.data.learning %}
-{% assign teacher = learning.teacher[page.teacher] %}
+{% assign author = learning.author[page.author] %}
 {% assign provider = learning.provider[page.provider] %}
 {% assign organisation = learning.organisation[page.organisation] %}
 {% assign price = learning.price[page.price].description[lang] %}
@@ -16,8 +16,8 @@
         </a>
         <p class="headline">
             <a class="title" href="{{page.content_url}}">{{page.title}}</a>
-            {% if teacher.name %}
-                {{t.by}} <a class="teacher" href="{{teacher.url}}">{{teacher.name}}</a>
+            {% if author.name %}
+                {{t.by}} <a class="author" href="{{author.url}}">{{author.name}}</a>
             {% endif %}
         </p>
         <p class="meta-info">

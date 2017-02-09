@@ -1,7 +1,7 @@
 ---
 title:        Machine Learning
 content_url:  https://www.coursera.org/learn/machine-learning
-teacher:      andrew-ng
+author:       andrew-ng
 organisation: stanford-university
 provider:     coursera
 price:        free-with-payed-certificate

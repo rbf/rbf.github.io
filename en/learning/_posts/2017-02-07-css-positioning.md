@@ -1,7 +1,7 @@
 ---
 title:        CSS Positioning
 content_url:  https://app.pluralsight.com/library/courses/css-positioning-1834
-teacher:      susan-simkins
+author:       susan-simkins
 provider:     pluralsight
 price:        requires-subscription-with-provider
 start_date:   2017-02-06

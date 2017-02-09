@@ -40,7 +40,10 @@ price:
         the provider.
 
 
-teacher:
+author:
+
+  # NOTE: 'author' is meant to be generic. It might be the author from a learning
+  #       book, but e.g. the main teacher in an online video course.
 
   michael-hartl:
     name: Michael Hartl

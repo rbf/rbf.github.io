@@ -1,7 +1,7 @@
 ---
 title:        "React.js: Getting Started"
 content_url:  https://app.pluralsight.com/library/courses/react-js-getting-started
-teacher:      samer-buna
+author:       samer-buna
 provider:     pluralsight
 price:        requires-subscription-with-provider
 start_date:   2017-02-05
