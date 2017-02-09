@@ -1,0 +1,33 @@
+html.theme-light {
+
+  .colors-yellow {
+               color: #990;
+        border-color: #990;
+    background-color: #ffc;
+  }
+  .colors-red {
+               color: #a00;
+        border-color: #a00;
+    background-color: #fbb;
+  }
+  .colors-grey {
+               color: #888;
+        border-color: #aaa;
+    background-color: #eee;
+  }
+
+  .colors-text-dark-grey {
+               color: #333;
+  }
+  .colors-text-light-grey {
+               color: #999;
+  }
+
+  .colors-background-white {
+    background-color: white;
+  }
+  .colors-background-light-grey {
+    background-color: #eee;
+  }
+
+}

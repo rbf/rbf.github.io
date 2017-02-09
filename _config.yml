@@ -35,6 +35,7 @@ permalink: pretty # SOURCE: https://jekyllrb.com/docs/permalinks/#built-in-perma
 
 # SOURCE: https://github.com/planetjekyll/awesome-jekyll-themes
 theme: minima # default
+default_color_theme: theme-light
 # theme: jekyll-swiss # https://github.com/broccolini/swiss
 
 google_analytics: UA-42657236-4

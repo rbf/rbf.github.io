@@ -3,13 +3,12 @@
 ---
 @import "minima";
 @import "simplegrid";
+@import "color_themes";
 
 $footer-height: 36px;
 
-$font-color-post-summary: #333;
-
 body {
-  background-color: white;
+  @extend .colors-background-white;
   &.page-home {
     .page-content {
       padding: 0;
@@ -17,7 +16,6 @@ body {
     }
   }
 }
-
 
 .itemprop {
   // For data added to the HTML only for https://schema.org purposes
@@ -111,9 +109,9 @@ ul.tags {
   }
   li {
     display: inline;
-    color: #888;
-    background-color: #eee;
-    border: 1px solid #aaa;
+    @extend .colors-grey;
+    border-width: 1px;
+    border-style: solid;
     margin: {
       top:    0;
       bottom: 0;
@@ -156,7 +154,7 @@ ul.tags {
 .post {
   .post-summary {
     font-style: italic;
-    color: $font-color-post-summary;
+    @extend .colors-text-dark-grey;
     margin: {
       bottom: 3em;
     }
@@ -176,9 +174,7 @@ ul.tags {
 
 .tag {
   &.current-tag {
-    background-color: #ffc;
-    color: #990;
-    border-color: #990;
+    @extend .colors-yellow;
   }
 }
 
@@ -227,7 +223,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-weight: 300;
-  color: #999;
+  @extend .colors-text-light-grey;
   font-size: .8em;
   text-align: center;
 }
@@ -248,7 +244,7 @@ $course-info-padding: 32px;
     top: 2em;
     bottom: 2em;
   }
-  background: #eee;
+  @extend .colors-background-light-grey;
   padding: $course-info-padding;
   .course-header {
     min-height: $provider-logo-width + $course-info-padding;
@@ -277,7 +273,7 @@ $course-info-padding: 32px;
   }
   .price {
     font-style: italic;
-    color: #888;
+    @extend .colors-text-light-grey;
     font-size: .9em;
     font-weight: 300;
   }
@@ -298,9 +294,7 @@ $course-info-padding: 32px;
   font-weight: bold;
   letter-spacing: normal;
   line-height: 24px;
-  background: #fbb;
-  color: #a00;
-  border-color: #a00;
+  @extend .colors-red;
   border-style: dotted;
   .filename {
     font-weight: normal;
