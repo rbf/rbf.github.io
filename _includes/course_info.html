@@ -1,13 +1,18 @@
 {% assign lang = page.url | slice: 1, 2 %}
 {% assign t = site.data.t[lang].word %}
+{% assign ts = site.data.t[lang].sentence %}
+{% assign tu = site.data.t[lang].unit %}
 {% assign learning = site.data.learning %}
 {% assign author = learning.author[page.author] %}
 {% assign provider = learning.provider[page.provider] %}
 {% assign organisation = learning.organisation[page.organisation] %}
 {% assign price = learning.price[page.price].description[lang] %}
+{% unless price %}
+    {% assign price = learning.price['purchase'].description[lang] | append: ' ' | append: page.price %}
+{% endunless %}
 {% assign start_date = page.start_date | date: '%b %Y' %}
 {% assign end_date = page.date | date: '%b %Y' %}
-{% assign duration = page.duration.approx.value | append: ' ' | append: t[page.duration.approx.unit] %}
+{% assign duration = page.duration.approx.value | append: ' ' | append: tu[page.duration.approx.unit] %}
 
 <div class="course-info">
     <div class="course-header">
@@ -15,7 +20,7 @@
             <img src="{{provider.logo}}" alt="{{provider.name}} logo">
         </a>
         <p class="headline">
-            <a class="title" href="{{page.content_url}}">{{page.title}}</a>
+            <a class="title" href="{{page.content_url}}">{{page.title}}</a>{% if page.original_content_url %}<sup>*</sup>{% endif %}
             {% if author.name %}
                 {{t.by}} <a class="author" href="{{author.url}}">{{author.name}}</a>
             {% endif %}
@@ -41,6 +46,11 @@
     <p class="summary">
         {{ page.summary | strip }}
     </p>
+    {% if page.original_content_url %}
+        <p class="original-content-url">
+            <sup>*</sup>{{ ts.original_content_html | replace: '%URL%', page.original_content_url | strip }}
+        </p>
+    {% endif %}
     <p class="price">
         {{price}}
     </p>

@@ -2,7 +2,7 @@
 title:        "Ruby on Rails Tutorial"
 subtitle:     "Learn Web Development with Rails, Third Edition"
 content_url:  https://www.safaribooksonline.com/library/view/ruby-on-rails/9780134077734/
-original_url: https://www.railstutorial.org
+original_content_url: https://www.railstutorial.org
 isbn:         9780134077734
 author:       michael-hartl
 organisation: addison-wesley-professional

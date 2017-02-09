@@ -271,7 +271,7 @@ $course-info-padding: 32px;
   .summary {
     font-style: italic;
   }
-  .price {
+  .price, .original-content-url {
     font-style: italic;
     @extend .colors-text-light-grey;
     font-size: .9em;

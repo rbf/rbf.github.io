@@ -15,6 +15,11 @@ provider:
     url:  https://pluralsight.com
     logo: /images/logos/pluralsight.png
 
+  ibook:
+    name: Apple iBook
+    url:  https://www.apple.com/ibooks/
+    logo: /images/logos/ibooks.png
+
 
 price:
 
@@ -39,6 +44,12 @@ price:
         The curse content is only available with a payed subscription with
         the provider.
 
+  purchase:
+    free: no
+    description:
+      en: >
+        Price:
+
 
 author:
 
@@ -54,6 +65,9 @@ author:
     name: Andrew Ng
     url:  http://online.stanford.edu/instructors/andrew-ng
     homepage: http://www.andrewng.org
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Andrew_Ng
+      es: https://es.wikipedia.org/wiki/Andrew_Ng
 
   arvind-narayanan:
     name: Arvind Narayanan
@@ -72,6 +86,12 @@ author:
     name: Jose Valim
     url:  https://app.pluralsight.com/profile/author/jose-valim
 
+  james-heisig:
+    name: James W. Heisig
+    url:  http://nirc.nanzan-u.ac.jp/en/staff/jheisig/
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/James_Heisig
+      es: https://es.wikipedia.org/wiki/James_Heisig
 
 organisation:
 
@@ -88,4 +108,9 @@ organisation:
   addison-wesley-professional:
     name: Addison-Wesley Professional
     url:  http://www.pearsonschool.com
+    type: publisher
+
+  university-of-hawaii-press:
+    name: University of Hawaii Press
+    url:  http://www.uhpress.hawaii.edu
     type: publisher

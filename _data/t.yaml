@@ -12,12 +12,19 @@ en:
     done_on: done on
     done_between: done between
     and: and
+  sentence:
+    original_content_html: >
+      This is the URL of the version I used. The original content can be found
+      <a href="%URL%">here</a>.
+  unit:
     hour: hour
     hours: hours
     day: day
     days: days
     week: week
     weeks: weeks
+    page: page
+    pages: pages
 
 fr:
   category:
