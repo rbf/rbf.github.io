@@ -288,6 +288,11 @@ $course-info-padding: 32px;
   float: right;
   position: relative;
   top: .4em;
+  &.draft-page {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
   padding: 0 13px;
   font-size: 13px;
   font-family: monospace;
