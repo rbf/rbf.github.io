@@ -4,7 +4,10 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title" itemprop="name headline">
+      {% include draft_label.html %}
+      {{ page.title | escape }}
+    </h1>
     {% if page.subtitle %}
       <h2 class="post-subtitle" itemprop="alternativeHeadline" itemscope itemtype="https://schema.org/alternativeHeadline">{{ page.subtitle | markdownify }}</h2>
     {% endif %}

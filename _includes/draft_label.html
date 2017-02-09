@@ -1,0 +1,1 @@
+{% if post.draft or page.draft %}<span class="draft-label">DRAFT: <span class="filename">{{post.path | default: page.path}}</span></span>{% endif %}

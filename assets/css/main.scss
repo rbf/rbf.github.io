@@ -287,3 +287,22 @@ $course-info-padding: 32px;
     }
   }
 }
+
+.draft-label {
+  float: right;
+  position: relative;
+  top: .4em;
+  padding: 0 13px;
+  font-size: 13px;
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 24px;
+  background: #fbb;
+  color: #a00;
+  border-color: #a00;
+  border-style: dotted;
+  .filename {
+    font-weight: normal;
+  }
+}
