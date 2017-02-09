@@ -4,6 +4,8 @@ permalink: /
 redirect_from: /en/
 ---
 
+{::options auto_ids="false" /}
+
 # {{site.title}}
 
 {% include avatar.html size='medium' %}
