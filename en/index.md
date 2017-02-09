@@ -8,14 +8,16 @@ redirect_from: /en/
 
 {% include avatar.html size='medium' %}
 
-We are a small software engineering studio based in [Zürich,
-Switzerland].
+Hi! I'm Rob, a software engineer based in Tokyo, Japan.
 
-We make functional software and [write articles](/blog).
+I make functional software,
+
+[write articles](/blog) and
+
+[learn things](/learning).
 
 {% include email within_tag='p'%}
 
-
 @rbf
 
-[Zürich, Switzerland]: https://www.stadt-zuerich.ch/portal/en/index/portraet_der_stadt_zuerich/impressions.html
+:sparkles:
