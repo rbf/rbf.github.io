@@ -18,6 +18,10 @@
 timezone: Asia/Tokyo
 safe: true
 
+# SOURCE: https://alexplescan.com/posts/2016/03/28/development-environment-config-overrides-in-jekyll/
+# SOURCE: https://help.github.com/articles/configuring-jekyll/
+show_drafts: true
+
 title: rbf.io
 subtitle: rather be functional
 lang: en
