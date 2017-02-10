@@ -26,8 +26,10 @@ summary: >
   in-browser, math skills kids' game.
 ---
 
+{% capture reactjs %}{% include link.html proglib='reactjs' %}{% endcapture %}
+
 Very short and to the point. It uses _traditional_
 [ES5](https://johnpapa.net/es5-es2015-typescript/) javascript. It's a very
-nice introduction to [react.js](https://facebook.github.io/react/), assuming
+nice introduction to {{reactjs}}, assuming
 good knowledge of html, css and javascript. I practiced what I learnt in this
 course in [this pen](http://codepen.io/rbf/pen/dNKwKm).

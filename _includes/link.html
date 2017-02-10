@@ -1,1 +1,1 @@
-{% assign proglang = site.data.proglangs[include.proglang] %}{% if proglang %}<a href="{{proglang.url}}">{{proglang.name}}</a>{% endif %}
+{% assign proglang = site.data.programming.lang[include.proglang] %}{% if proglang %}<a href="{{proglang.url}}">{{proglang.name}}</a>{% endif %}{% assign proglib = site.data.programming.lib[include.proglib] %}{% if proglib %}<a href="{{proglib.url}}">{{proglib.name}}</a>{% endif %}
