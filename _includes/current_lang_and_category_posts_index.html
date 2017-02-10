@@ -22,7 +22,9 @@
         {% unless distinct_categories.size == 0 %}
           <span class="post-distinct-categories">
             {% for distinct_category in distinct_categories %}
-              <span class="post-distinct-category">{{ distinct_category }}</span>
+              <span class="post-distinct-category">
+                <a href="/{{current_lang}}/{{distinct_category}}">{{distinct_category}}</a>
+              </span>
               <span class="post-distinct-category-slash">/</span>
             {% endfor %}
           </span>
