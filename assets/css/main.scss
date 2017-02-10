@@ -178,6 +178,15 @@ ul.tags {
   }
 }
 
+.post-item {
+  .post-link {
+    display: inline-block;
+  }
+  .post-distinct-categories {
+    @extend .post-link;
+  }
+}
+
 // SOURCE:https://github.com/basimilch/basimilch.github.io/blob/c3c8a6b7/css/custom.scss#L246-L263
 $ascii-open-in-new-tab: "\27a0";
 // $ascii-open-in-new-tab: "\261e";

@@ -1,5 +1,6 @@
-{% assign current_lang = page.url | slice: 1, 2 %}
-{% assign current_category = page.url | slice: 4, 100 | remove: '/' %}
+{% assign current_page_categories = page.url | split: '/' | where_exp:'i','i != ""' %}
+{% assign current_lang = current_page_categories[0] %}
+{% assign current_category = current_page_categories[1] %}
 {% if include.tag %}
     {% assign current_lang_category_posts = site.categories[current_lang] | where_exp:"post","post.tags contains include.tag" %}
 {% else %}
@@ -8,10 +9,24 @@
 <h1>{{ site.data.t[current_lang].category[current_category] | capitalize }}</h1>
 <div class="grid post-list">
   {% for post in current_lang_category_posts %}
+    {% assign distinct_categories = '' | split:'' %}
+    {% for cat in post.categories %}
+      {% unless current_page_categories contains cat %}
+        {% assign distinct_categories = distinct_categories | push: cat %}
+      {% endunless %}
+    {% endfor %}
     <div class="post-item">
       <span class="post-meta col-2-12">{{ post.date | date: "%b %-d, %Y" }}</span>
       <div class="col-10-12">
         {% include draft_label.html %}
+        {% unless distinct_categories.size == 0 %}
+          <span class="post-distinct-categories">
+            {% for distinct_category in distinct_categories %}
+              <span class="post-distinct-category">{{ distinct_category }}</span>
+              <span class="post-distinct-category-slash">/</span>
+            {% endfor %}
+          </span>
+        {% endunless %}
         <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         {% include tags.html current_tag=tag %}
       </div>
