@@ -184,6 +184,10 @@ ul.tags {
   }
   .post-distinct-categories {
     @extend .post-link;
+    opacity: .3;
+  }
+  &:hover .post-distinct-categories {
+    opacity: inherit;
   }
 }
 
