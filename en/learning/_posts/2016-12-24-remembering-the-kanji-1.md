@@ -3,8 +3,8 @@ title:        Remembering the Kanji 1
 subtitle: >
     A Complete Course on How Not to Forget the Meaning and Writing of
     Japanese Characters, 6th edition.
-content_url:  https://itunes.apple.com/jp/book/remembering-the-kanji-1/id1082903591
-original_content_url:  http://nirc.nanzan-u.ac.us/en/publications/miscellaneous-publications/remembering-the-kanji/
+content_url:  https://itunes.apple.com/us/book/remembering-the-kanji-1/id1082903591
+original_content_url:  http://nirc.nanzan-u.ac.jp/en/publications/miscellaneous-publications/remembering-the-kanji/
 author:       james-heisig
 organisation: university-of-hawaii-press
 provider:     ibook
