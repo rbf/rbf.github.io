@@ -17,7 +17,13 @@ duration:
     value:    1.5
     unit:     hours
 summary: >
-  This course covers the basics of React.js and prepares the student to start developing web applications with the library. React.js is a an open-source JavaScript library for creating user interfaces with a focus on the UI that's abstracted from the DOM, and a one-way reactive data flow. The course will explain using an example web application how to use React.js. The application will be a simple in-browser, math skills kids' game.
+  This course covers the basics of React.js and prepares the student
+  to start developing web applications with the library. React.js is a
+  an open-source JavaScript library for creating user interfaces with
+  a focus on the UI that's abstracted from the DOM, and a one-way
+  reactive data flow. The course will explain using an example web
+  application how to use React.js. The application will be a simple
+  in-browser, math skills kids' game.
 ---
 
 Very short and to the point. It uses _traditional_
