@@ -13,7 +13,7 @@ layout: default
     {% endif %}
 
     {% include tags.html %}
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+    <p class="post-meta"><time class="no-link-in-new-tab-arrow" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" data-href="{{site.github.repository_url}}/commits/master/{{page.path}}">{{ page.date | date: "%b %-d, %Y" }}</time></p>
     <span class="post-meta itemprops">
       {% if page.author %}<span class="itemprop" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}{% if page.tags %}<span class="itemprop" itemprop="keywords" itemscope itemtype="https://schema.org/keywords">{{ page.tags | array_to_sentence_string | replace: ' and ', ' '}}</span>{% endif %}<span class="itemprop" itemprop="wordCount" itemscope itemtype="https://schema.org/wordCount">{{ page.content | number_of_words }}</span>
     </span>
