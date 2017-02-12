@@ -1,11 +1,29 @@
 # NOTE: The descriptions are extracted from the corresponding official webpage
 #       or from wikipedia.
 
-# Programming Languages
+# Programming and markup languages
+
+xml:
+  name: XML
+  longname: Extensible Markup Language (XML)
+  url: https://www.w3.org/XML/
+  documentation_url: https://www.w3.org/TR/REC-xml/
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/XML
+    es: https://es.wikipedia.org/wiki/Extensible_Markup_Language
+  description:
+    en: >
+      In computing, Extensible Markup Language (XML) is a markup
+      language that defines a set of rules for encoding documents in a
+      format that is both human-readable and machine-readable. The
+      W3C's XML 1.0 Specification and several other related
+      specifications -—all of them free open standards—- define XML.
 
 html:
   name: HTML
-  url: https://www.w3.org/html/
+  longname: HyperText Markup Language (HTML)
+  url: https://html.spec.whatwg.org/multipage/
+  w3org_url: https://www.w3.org/html/
   wikipedia:
     en: https://en.wikipedia.org/wiki/HTML
     es: https://es.wikipedia.org/wiki/HTML
@@ -16,6 +34,7 @@ html:
 
 css:
   name: CSS
+  longname: Cascading Style Sheets (CSS)
   url: https://www.w3.org/css/
   wikipedia:
     en: https://en.wikipedia.org/wiki/Cascading_Style_Sheets
@@ -137,13 +156,25 @@ ruby:
       natural to read and easy to write.
 
 
-# Programming Libraries
+# Programming libraries and related refs
 
 react:
   name: React
   url: https://facebook.github.io/react/
   repo_url: https://github.com/facebook/react
+  installation_doc_url: https://facebook.github.io/react/docs/installation.html
+  github_releases_url: https://github.com/facebook/react/releases
+  docs_url: https://facebook.github.io/react/docs/hello-world.html
   description:
     en: >
       A declarative, efficient, and flexible JavaScript library for building
       user interfaces.
+
+jsx:
+  name: JSX
+  url: https://facebook.github.io/react/docs/jsx-in-depth.html
+  ext: "`.jsx`"
+  description:
+    en: >
+      Fundamentally, JSX just provides syntactic sugar for the
+      `React.createElement(component, props, ...children)` function.

@@ -33,6 +33,13 @@ layout: default
     {{ content }}
   </div>
 
+  {% unless page.hide_codepens %}
+    {% assign copepens = content | split: 'class="codepen"' %}
+    {% if copepens.size > 1 %}
+      <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    {% endif %}
+  {% endunless %}
+
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
