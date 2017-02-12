@@ -70,9 +70,6 @@ defaults:
       author: 'rbf'
       layout: 'default'
 
-refs:
-  default_link_class: unobtrusive
-
 sass:
     style: compressed
 

@@ -21,6 +21,12 @@ a.unobtrusive {
   color: inherit;
 }
 
+.ref-link-replaced {
+  &:not(.ref-link-first-occurence) {
+    @extend a.unobtrusive;
+  }
+}
+
 .itemprop {
   // For data added to the HTML only for https://schema.org purposes
   display: none;
