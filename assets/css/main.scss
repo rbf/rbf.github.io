@@ -17,6 +17,10 @@ body {
   }
 }
 
+a.unobtrusive {
+  color: inherit;
+}
+
 .itemprop {
   // For data added to the HTML only for https://schema.org purposes
   display: none;

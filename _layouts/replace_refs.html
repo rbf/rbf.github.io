@@ -1,0 +1,59 @@
+---
+# Jekyll layout that replaces
+# v0.1.0
+# http://rbf.io/
+# © 2017 rbf
+# MIT License
+layout: base
+ref_link_class: replaced-ref-link
+---
+
+{% assign page_lang = page.url | slice: 1, 2 | default: site.lang %}
+{% for ref in site.data.refs %}
+    {% assign key = ref[0] %}
+    {% assign fields = ref[1] %}
+    {% assign field_name = fields.name | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip %}
+    {% for field in fields %}
+        {% assign subkey = field[0] %}
+        {% assign value = field[1][page_lang] | default: field[1][site.lang] | default: field[1] | strip %}
+        {% assign value_formatted = value | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip %}
+        {% capture expr %}[[{{key}}.{{subkey}}]]{% endcapture %}
+        {% capture link %}<a class="{{layout.ref_link_class}}" href="{{value}}">{{field_name}}</a>{% endcapture %}
+        {% assign content = content | replace: expr, link %}
+        {% capture expr %}(({{key}}.{{subkey}})){% endcapture %}
+        {% assign content = content | replace: expr, value_formatted %}
+    {% endfor %}
+    {% capture expr %}[[{{key}}]]{% endcapture %}
+    {% capture link %}<a class="{{layout.ref_link_class}}{% if site.refs.default_link_class %} {{site.refs.default_link_class}}{% endif %}" href="{{fields.url}}">{{field_name}}</a>{% endcapture %}
+    {% assign content = content | replace: expr, link %}
+    {% capture expr %}(({{key}})){% endcapture %}
+    {% assign content = content | replace: expr, field_name %}
+{% endfor %}
+{% comment %}{% raw %}
+    (liquid tags are still processed within comments... so that the double
+    comment-raw tags are needed!) :(
+
+    To prevent broken links, it's interesting to detect if there is
+    still a remaining pair of '[[...]]' after all replacements have been
+    done. But it's not trivial to do it properly.
+
+    For the time being I'll go with breaking the build, alas without
+    proper console info. Using "{% if broken_link_found %}{% link
+    broken_link_found %}{% endif %}" will be as descriptive as it
+    gets.
+
+    # TODO
+
+    Currently we do all ref replacements by generating all possible replacement
+    tags and replacing them. A probably more efficient way would be to leverage
+    the _find_ method described above to do only targeted replacements.
+
+{% endraw %}{% endcomment %}
+{% unless page.draft %}
+    {% assign ref_openings = content | split: '[[' %}
+    {% if ref_openings.size > 1 %}
+        {% link broken_link_found %}
+        {% break %}
+    {% endif %}
+{% endunless %}
+{{content}}

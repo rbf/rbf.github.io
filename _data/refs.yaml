@@ -1,0 +1,149 @@
+# NOTE: The descriptions are extracted from the corresponding official webpage
+#       or from wikipedia.
+
+# Programming Languages
+
+html:
+  name: HTML
+  url: https://www.w3.org/html/
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/HTML
+    es: https://es.wikipedia.org/wiki/HTML
+  description:
+    en: >
+      HyperText Markup Language (HTML) is the standard markup
+      language for creating web pages and web applications.
+
+css:
+  name: CSS
+  url: https://www.w3.org/css/
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/Cascading_Style_Sheets
+    es: https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada
+  description:
+    en: >
+      Cascading Style Sheets (CSS) is a style sheet language used
+      for describing the presentation of a document written in a
+      markup language.
+
+javascript:
+  name: JavaScript
+  url: https://www.javascript.com
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/JavaScript
+    es: https://es.wikipedia.org/wiki/JavaScript
+  description:
+    en: >
+      JavaScript is a high-level, dynamic, untyped, and interpreted
+      programming language. Alongside HTML and CSS, JavaScript is
+      one of the three core technologies of World Wide Web content
+      production; the majority of websites employ it, and all modern
+      Web browsers support it without the need for plug-ins.
+
+coffeescript:
+  name: CoffeeScript
+  url: http://coffeescript.org/
+  repo_url: https://github.com/jashkenas/coffeescript
+  description:
+    en: >
+      CoffeeScript is a little language that compiles into JavaScript.
+      Underneath that awkward Java-esque patina, JavaScript has always
+      had a gorgeous heart. CoffeeScript is an attempt to expose the
+      good parts of JavaScript in a simple way.
+
+elm:
+  name: elm
+  url: http://elm-lang.org/
+  repo_url: https://github.com/elm-lang
+  description:
+    en: >
+      A delightful language for reliable webapps. Generate JavaScript
+      with great performance and no runtime exceptions.
+
+go:
+  name: go
+  url: https://golang.org/
+  repo_url: https://go.googlesource.com/go
+  description:
+    en: >
+      Go is an open source programming language that makes it easy to
+      build simple, reliable, and efficient software.
+
+elixir:
+  name: Elixir
+  url: http://elixir-lang.org/
+  repo_url: https://github.com/elixir-lang/elixir
+  description:
+    en: >
+      Elixir is a dynamic, functional language designed for building
+      scalable and maintainable applications. Elixir leverages the
+      Erlang VM, known for running low-latency, distributed and fault-
+      tolerant systems, while also being successfully used in web
+      development and the embedded software domain.
+
+erlang:
+  name: Erlang
+  url: http://www.erlang.org
+  repo_url: https://github.com/erlang/otp
+  documentation_url: http://www.erlang.org/docs
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/Erlang_(programming_language)
+    es: https://es.wikipedia.org/wiki/Erlang
+  description:
+    en: >
+      Erlang is a programming language used to build massively
+      scalable soft real-time systems with requirements on high
+      availability. Some of its uses are in telecoms, banking,
+      e-commerce, computer telephony and instant messaging. Erlang's
+      runtime system has built-in support for concurrency,
+      distribution and fault tolerance.
+
+clojure:
+  name: Clojure
+  url: http://clojure.org/
+  repo_url: https://github.com/clojure/clojure
+  description:
+    en: >
+      Clojure is a robust, practical, and fast programming language
+      with a set of useful features that together form a simple,
+      coherent, and powerful tool.
+
+python:
+  name: Python
+  url: https://www.python.org/
+  repo_url: https://hg.python.org/cpython/
+  description:
+    en: >
+      Python is a programming language that lets you work quickly
+      and integrate systems more effectively.
+
+swift:
+  name: Swift
+  url: https://swift.org/
+  repo_url: https://github.com/apple/swift
+  description:
+    en: >
+      Swift makes it easy to write software that is incredibly fast
+      and safe by design.
+
+ruby:
+  name: Ruby
+  url: https://www.ruby-lang.org/en/
+  repo_url: https://github.com/ruby/ruby
+  description:
+    en: >
+      A dynamic, open source programming language with a focus on
+      simplicity and productivity. It has an elegant syntax that is
+      natural to read and easy to write.
+
+
+# Programming Libraries
+
+react:
+  name: React
+  url: https://facebook.github.io/react/
+  repo_url: https://github.com/facebook/react
+  description:
+    en: >
+      A declarative, efficient, and flexible JavaScript library for building
+      user interfaces.

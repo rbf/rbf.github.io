@@ -28,15 +28,10 @@ summary: >
   files.
 ---
 
-{% capture elixir %}{% include link.html proglang='elixir' %}{% endcapture %}
-{% capture clojure %}{% include link.html proglang='clojure' %}{% endcapture %}
-{% capture ruby %}{% include link.html proglang='ruby' %}{% endcapture %}
-{% capture erlang %}{% include link.html proglang='erlang' %}{% endcapture %}
-
 Very interesting programming session with
 [{{site.data.learning.author.jose-valim.name}}]({{site.data.learning.author.jose-valim.github}}),
 creator and [main commiter](https://github.com/elixir-lang/elixir/graphs/contributors)
-of the {{elixir}} language. The format of the
+of the [[elixir]] language. The format of the
 tutorial is very entertaining and original: instead of doing a
 structured introduction to the language, they pick an _arbitrary_
 programming task (parsing of HTTP streaming metadata files) and use it
@@ -49,10 +44,10 @@ that the curse is a bit old (three and a half years as of this
 writing) so that the current state of the language might have evolved
 significantly.
 
-This was my first contact with {{elixir}}. While the syntax itself
-it's naturally mostly inspired from {{ruby}} and {{erlang}}, some
+This was my first contact with [[elixir]]. While the syntax itself
+it's naturally mostly inspired from [[ruby]] and [[erlang]], some
 concepts like macros, pipeline operators and messaging were familiar
-to me thanks to {{clojure}}.
+to me thanks to [[clojure]].
 
 In summary, I really enjoyed this tutorial and also because of the
 concise length it's very worth watching.
