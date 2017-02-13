@@ -122,8 +122,13 @@ ul.tags {
   margin-left: 0;
   font-size: 0.8em;
   margin:{
-    top: 15px;
-    bottom: 15px;
+    top: 0.5em;
+    bottom: 1em;
+  }
+  .post-header & {
+    margin:{
+      bottom: 1.4em;
+    }
   }
   li {
     display: inline;
@@ -160,8 +165,14 @@ ul.tags {
     padding-top: 9px;
   }
   [class^=col-] {
+    @media handheld, only screen and (max-width: 767px) {
       margin: {
-      bottom: 25px;
+        bottom: 2em;
+        top: 0em;
+      }
+    }
+    margin: {
+      bottom: 1em;
     }
   }
 }
