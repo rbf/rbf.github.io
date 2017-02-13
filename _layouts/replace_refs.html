@@ -10,10 +10,16 @@ ref_link:
     class: ref-link-replaced
     first_occurrence_class: ref-link-first-occurence
     default_link_class: ref-link-default-link
+    tag_link_class: ref-link-tag
     specific_link_class: ref-link-specific-link
 ---
 
+{% assign tags = '' | split: '' %}
+{% for tag in site.tags %}{% assign tags = tags | push: tag[0] %}{% endfor %}
+{% assign tags = tags | sort %}
+
 {% assign page_lang = page.url | slice: 1, 2 | default: site.lang %}
+
 {% for ref in site.data.refs %}
     {% assign key = ref[0] %}
     {% assign fields = ref[1] %}
@@ -31,10 +37,16 @@ ref_link:
         {% assign content = content | replace: expr, value_formatted %}
     {% endfor %}
     {% capture expr %}[[{{key}}]]{% endcapture %}
-    {% capture link_first_occurence %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}} {{layout.ref_link.first_occurrence_class}}" href="{{fields.website}}">{{field_name}}</a>{% endcapture %}
-    {% capture link %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}}" href="{{fields.website}}">{{field_name}}</a>{% endcapture %}
-    {% assign content = content | replace_first: expr, link_first_occurence %}
-    {% assign content = content | replace: expr, link %}
+    {% if tags contains key %}
+        {% capture tag_url %}/{{page_lang}}/tags/#{{key}}{% endcapture %}
+        {% capture default_link_first_occurence %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}} {{layout.ref_link.tag_link_class}} {{layout.ref_link.first_occurrence_class}}" href="{{tag_url}}">{{field_name}}</a>{% endcapture %}
+        {% capture default_link %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}} {{layout.ref_link.tag_link_class}}" href="{{tag_url}}">{{field_name}}</a>{% endcapture %}
+    {% else %}
+        {% capture default_link_first_occurence %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}} {{layout.ref_link.first_occurrence_class}}" href="{{fields.website}}">{{field_name}}</a>{% endcapture %}
+        {% capture default_link %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}}" href="{{fields.website}}">{{field_name}}</a>{% endcapture %}
+    {% endif %}
+    {% assign content = content | replace_first: expr, default_link_first_occurence %}
+    {% assign content = content | replace: expr, default_link %}
     {% capture expr %}(({{key}})){% endcapture %}
     {% assign content = content | replace: expr, field_name %}
 {% endfor %}
