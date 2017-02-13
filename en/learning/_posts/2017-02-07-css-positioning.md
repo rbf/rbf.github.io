@@ -32,7 +32,7 @@ summary: >
 
 Very short and to the point. It's a very nice introduction or
 refresh to proper positioning of HTML elements, specially
-regarding centering of elements. I practiced what I learnt in
+regarding centering of elements. I practiced what I learned in
 this course in [this pen](http://codepen.io/rbf/pen/mRjpKK):
 
 <br>

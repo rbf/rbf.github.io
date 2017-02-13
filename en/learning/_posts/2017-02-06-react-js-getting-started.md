@@ -32,7 +32,7 @@ Very short and to the point. It's a very nice introduction to
 [[react]], assuming good knowledge of [[html]], [[css]] and
 [[javascript]]. It uses _traditional_
 [ES5](https://johnpapa.net/es5-es2015-typescript/) [[javascript]]. I
-practiced what I learnt in this course in [this
+practiced what I learned in this course in [this
 pen](http://codepen.io/rbf/pen/dNKwKm).
 
 # Basics

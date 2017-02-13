@@ -40,14 +40,14 @@ as leitmotiv to cover the main aspects of the language.
 I enjoyed the session a lot because it's also a good example of how to
 tackle a programming task with a TDD top-down approach. However, as a
 first introduction to the language it's a bit rough. It's worth noting
-that the curse is a bit old (three and a half years as of this
+that the course is a bit old (three and a half years as of this
 writing) so that the current state of the language might have evolved
 significantly.
 
-This was my first contact with [[elixir]]. While the syntax itself
-it's naturally mostly inspired from [[ruby]] and [[erlang]], some
-concepts like macros, pipeline operators and messaging were familiar
-to me thanks to [[clojure]].
+This was my first contact with [[elixir]]. While the syntax itself is
+naturally mostly inspired from [[ruby]] and [[erlang]], some concepts
+like macros, pipeline operators and messaging were familiar to me
+thanks to [[clojure]].
 
 In summary, I really enjoyed this tutorial and also because of the
 concise length it's very worth watching.
