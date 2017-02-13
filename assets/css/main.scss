@@ -24,6 +24,9 @@ body {
 
 a.unobtrusive {
   color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .ref-link-replaced {
@@ -217,6 +220,7 @@ ul.tags {
 
 .post-item {
   .post-link {
+    @extend a.unobtrusive;
     display: inline-block;
   }
   .post-distinct-categories {
