@@ -26,7 +26,7 @@ jQuery ->
 
     setTitle = (s) ->
       sep = ' | '
-      base_title = document.title.replace(RegExp(' \\' + sep + ' .*'),'')
+      base_title = document.title.replace(RegExp(' \\' + sep.trim() + ' .*'),'')
       document.title = base_title
       if s and (s_trimmed = s.trim()) != ''
         document.title = base_title + sep + s_trimmed
