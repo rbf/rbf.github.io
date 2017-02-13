@@ -24,6 +24,15 @@ jQuery ->
     clearHash = ->
       window.location.hash = '' # NOTE: this triggers a 'hashchange' event
 
+    setTitle = (s) ->
+      sep = ' | '
+      base_title = document.title.replace(RegExp(' \\' + sep + ' .*'),'')
+      document.title = base_title
+      if s and (s_trimmed = s.trim()) != ''
+        document.title = base_title + sep + s_trimmed
+
+    $$.setTitle = setTitle
+
     showOnlyTagIndex = ->
       $('.tag-posts-list').css('display','none')
       $('#tag-index').css('display','inherit')
@@ -37,6 +46,7 @@ jQuery ->
     updateTranslationLinks = (tag) ->
       $('.translation-link:not(current-translation) a').attr 'href', (i, val) ->
         val.replace(/#\w*/, '') + tag
+      setTitle tag
       if tag? and tag != ''
         $('.translation-link').css('display','none')
         $("#lang-tags .lang-tags[data-tags*='" + tag.slice(1) + "']").each (i,elem)->
