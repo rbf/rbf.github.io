@@ -12,6 +12,10 @@ en:
     done_on: done on
     done_between: done between
     and: and
+    website: website
+    wikipedia: wikipedia
+    repo: repo
+    documentation: documentation
   sentence:
     original_content_html: >
       This is the URL of the version I used. The original content can be found

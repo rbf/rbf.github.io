@@ -1,4 +1,6 @@
 {% assign current_lang = page.url | slice: 1, 2 %}
+{% assign w = site.data.t[current_lang].word %}
+{% assign w_default = site.data.t[site.lang].word %}
 {% assign tags = "|" | split: "|" %}
 {% for tag in site.tags %}
     {% assign tagname = tag | first %}
@@ -21,7 +23,24 @@
 </div>
 {% for tag in tags %}
 <div id="{{tag}}" class="tag-posts-list {{tag}}" style="display: none;">
-    <h1>Tag: {{site.data.t[current_lang].tag[tag] | default: tag | capitalize}}</h1>
+    <h1>Tag: <span class="tag-name tag current-tag">{{site.data.t[current_lang].tag[tag] | default: tag }}</span></h1>
+    {% assign tag_ref = site.data.refs[tag] %}
+    {% if tag_ref %}
+        <div class="tag-info">
+            <p class="description">(({{tag}}.description))</p>
+            <div class="links">
+                {% assign possible_tag_links = 'website|repo|documentation|wikipedia' | split: '|' %}
+                {% assign existent_tag_links = '' | split: '' %}
+                {% for tl in possible_tag_links %}
+                    {% if tag_ref[tl] %}
+                        {% capture link_html %}<a class="{{tl}}-link" href="(({{tag}}.{{tl}}))">{{w[tl] | default: w_default[tl] | capitalize}}</a>{% endcapture %}
+                        {% assign existent_tag_links = existent_tag_links | push: link_html %}
+                    {% endif %}
+                {% endfor %}
+                {{ existent_tag_links | join: ' ● ' }}
+            </div>
+        </div>
+    {% endif %}
     {% include current_lang_and_category_posts_index.html tag=tag %}
 </div>
 {% endfor %}

@@ -10,7 +10,7 @@ support:      video
 level:        beginner
 myrating:     5/5
 release_date: 2015-06-13
-tags:         code html javascript webdev reactjs
+tags:         code html javascript webdev react
 duration:
   exact:      01:29h
   approx:

@@ -6,8 +6,8 @@
 xml:
   name: XML
   longname: Extensible Markup Language (XML)
-  url: https://www.w3.org/XML/
-  documentation_url: https://www.w3.org/TR/REC-xml/
+  website: https://www.w3.org/XML/
+  documentation: https://www.w3.org/TR/REC-xml/
   wikipedia:
     en: https://en.wikipedia.org/wiki/XML
     es: https://es.wikipedia.org/wiki/Extensible_Markup_Language
@@ -22,7 +22,7 @@ xml:
 html:
   name: HTML
   longname: HyperText Markup Language (HTML)
-  url: https://html.spec.whatwg.org/multipage/
+  website: https://html.spec.whatwg.org/multipage/
   w3org_url: https://www.w3.org/html/
   wikipedia:
     en: https://en.wikipedia.org/wiki/HTML
@@ -35,7 +35,7 @@ html:
 css:
   name: CSS
   longname: Cascading Style Sheets (CSS)
-  url: https://www.w3.org/css/
+  website: https://www.w3.org/css/
   wikipedia:
     en: https://en.wikipedia.org/wiki/Cascading_Style_Sheets
     es: https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada
@@ -47,7 +47,7 @@ css:
 
 javascript:
   name: JavaScript
-  url: https://www.javascript.com
+  website: https://www.javascript.com
   wikipedia:
     en: https://en.wikipedia.org/wiki/JavaScript
     es: https://es.wikipedia.org/wiki/JavaScript
@@ -61,8 +61,8 @@ javascript:
 
 coffeescript:
   name: CoffeeScript
-  url: http://coffeescript.org/
-  repo_url: https://github.com/jashkenas/coffeescript
+  website: http://coffeescript.org/
+  repo: https://github.com/jashkenas/coffeescript
   description:
     en: >
       CoffeeScript is a little language that compiles into JavaScript.
@@ -72,8 +72,8 @@ coffeescript:
 
 elm:
   name: elm
-  url: http://elm-lang.org/
-  repo_url: https://github.com/elm-lang
+  website: http://elm-lang.org/
+  repo: https://github.com/elm-lang
   description:
     en: >
       A delightful language for reliable webapps. Generate JavaScript
@@ -81,8 +81,8 @@ elm:
 
 go:
   name: go
-  url: https://golang.org/
-  repo_url: https://go.googlesource.com/go
+  website: https://golang.org/
+  repo: https://go.googlesource.com/go
   description:
     en: >
       Go is an open source programming language that makes it easy to
@@ -90,8 +90,13 @@ go:
 
 elixir:
   name: Elixir
-  url: http://elixir-lang.org/
-  repo_url: https://github.com/elixir-lang/elixir
+  website: http://elixir-lang.org/
+  repo: https://github.com/elixir-lang/elixir
+  documentation: https://hexdocs.pm/elixir/Kernel.html
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/Elixir_(programming_language)
+    de: https://de.wikipedia.org/wiki/Elixir_(Programmiersprache)
+    fr: https://fr.wikipedia.org/wiki/Elixir_(langage)
   description:
     en: >
       Elixir is a dynamic, functional language designed for building
@@ -102,9 +107,9 @@ elixir:
 
 erlang:
   name: Erlang
-  url: http://www.erlang.org
-  repo_url: https://github.com/erlang/otp
-  documentation_url: http://www.erlang.org/docs
+  website: http://www.erlang.org
+  repo: https://github.com/erlang/otp
+  documentation: http://erlang.org/doc/search/
   wikipedia:
     en: https://en.wikipedia.org/wiki/Erlang_(programming_language)
     es: https://es.wikipedia.org/wiki/Erlang
@@ -119,8 +124,14 @@ erlang:
 
 clojure:
   name: Clojure
-  url: http://clojure.org/
-  repo_url: https://github.com/clojure/clojure
+  website: http://clojure.org/
+  repo: https://github.com/clojure/clojure
+  # community-powered documentation and examples repository
+  documentation: https://clojuredocs.org
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/Clojure
+    es: https://es.wikipedia.org/wiki/Clojure
+    fr: https://fr.wikipedia.org/wiki/Clojure
   description:
     en: >
       Clojure is a robust, practical, and fast programming language
@@ -129,8 +140,8 @@ clojure:
 
 python:
   name: Python
-  url: https://www.python.org/
-  repo_url: https://hg.python.org/cpython/
+  website: https://www.python.org/
+  repo: https://hg.python.org/cpython/
   description:
     en: >
       Python is a programming language that lets you work quickly
@@ -138,8 +149,8 @@ python:
 
 swift:
   name: Swift
-  url: https://swift.org/
-  repo_url: https://github.com/apple/swift
+  website: https://swift.org/
+  repo: https://github.com/apple/swift
   description:
     en: >
       Swift makes it easy to write software that is incredibly fast
@@ -147,34 +158,138 @@ swift:
 
 ruby:
   name: Ruby
-  url: https://www.ruby-lang.org/en/
-  repo_url: https://github.com/ruby/ruby
+  website: https://www.ruby-lang.org/en/
+  repo: https://github.com/ruby/ruby
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/Ruby_(programming_language)
+    es: https://es.wikipedia.org/wiki/Ruby
   description:
     en: >
-      A dynamic, open source programming language with a focus on
-      simplicity and productivity. It has an elegant syntax that is
-      natural to read and easy to write.
+      Ruby is a dynamic, reflective, object-oriented, general-purpose,
+      open source programming language with a focus on simplicity and
+      productivity. It has an elegant syntax that is natural to read
+      and easy to write. It was designed and developed in the mid-
+      1990s by Yukihiro "Matz" Matsumoto in Japan. According to its
+      creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada,
+      and Lisp. It supports multiple programming paradigms, including
+      functional, object-oriented, and imperative. It also has a
+      dynamic type system and automatic memory management.
 
 
 # Programming libraries and related refs
 
 react:
   name: React
-  url: https://facebook.github.io/react/
-  repo_url: https://github.com/facebook/react
+  website: https://facebook.github.io/react/
+  repo: https://github.com/facebook/react
   installation_doc_url: https://facebook.github.io/react/docs/installation.html
   github_releases_url: https://github.com/facebook/react/releases
   docs_url: https://facebook.github.io/react/docs/hello-world.html
   description:
     en: >
-      A declarative, efficient, and flexible JavaScript library for building
-      user interfaces.
+      React is a declarative, efficient, and flexible JavaScript
+      library for building user interfaces.
 
 jsx:
   name: JSX
-  url: https://facebook.github.io/react/docs/jsx-in-depth.html
+  website: https://facebook.github.io/react/docs/jsx-in-depth.html
   ext: "`.jsx`"
   description:
     en: >
       Fundamentally, JSX just provides syntactic sugar for the
       `React.createElement(component, props, ...children)` function.
+
+jekyll:
+  name: Jekyll
+  website: https://jekyllrb.com
+  repo: https://github.com/jekyll/jekyll
+  documentation: https://jekyllrb.com/docs/home/
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/Jekyll_(software)
+  description:
+    en: >
+      Jekyll is a simple, blog-aware, static site generator written in
+      Ruby, perfect for personal, project, or organization sites.
+      Think of it like a file-based CMS, without all the complexity.
+      Jekyll takes your content, renders Markdown and Liquid
+      templates, and spits out a complete, static website ready to be
+      served by Apache, Nginx or another web server. Jekyll is the
+      engine behind GitHub Pages, which you can use to host sites
+      right from your GitHub repositories.
+
+
+# Misc
+
+kanji:
+  name: Kanji
+  wikipedia:
+    ca: https://ca.wikipedia.org/wiki/Kanji
+    de: https://de.wikipedia.org/wiki/Kanji
+    en: https://en.wikipedia.org/wiki/Kanji
+    es: https://es.wikipedia.org/wiki/Kanji
+    fr: https://fr.wikipedia.org/wiki/Kanji
+  description:
+    ca: >
+      Els kanji (漢字) són els caràcters d'origen xinès, de l'època de
+      la dinastia Han, que s'utilitzen a l'escriptura japonesa junt
+      amb els sil·labaris _katakana_ i _hiragana_.
+    de: >
+      Kanji (漢字) ist die japanische Bezeichnung für chinesische
+      Schriftzeichen, wie sie unter anderem in der japanischen Schrift
+      verwendet werden.
+    en: >
+      Kanji (漢字) are the adopted logographic Chinese characters that
+      are used in the modern Japanese writing system along with
+      _hiragana_ and _katakana_. The Japanese term kanji for the
+      Chinese characters literally means "Han characters" and is
+      written using the same characters as the Chinese word _hànzì_.
+    es: >
+      Los kanji (漢字, literalmente «carácter han») son los sinogramas
+      utilizados en la escritura del idioma japonés.
+    fr: >
+      Les kanjis sont des caractères chinois --- ou des caractères
+      morphologiquement proches de ces derniers --- dont la fonction
+      est d'écrire une partie de la langue japonaise en associant à
+      chaque signe une matrice de sens et de prononciations (aussi
+      appelées lectures).
+
+machinelearning:
+  wikipedia:
+    ca: https://ca.wikipedia.org/wiki/Aprenentatge_automàtic
+    de: https://de.wikipedia.org/wiki/Maschinelles_Lernen
+    en: https://en.wikipedia.org/wiki/Machine_learning
+    es: https://es.wikipedia.org/wiki/Aprendizaje_automático
+    fr: https://fr.wikipedia.org/wiki/Apprentissage_automatique
+  description:
+    ca: >
+      L'Aprenentatge automàtic és un camp de la intel·ligència
+      artificial que està dedicat al disseny, anàlisi i
+      desenvolupament d'algorismes i tècniques que permeten que les
+      màquines evolucionin.
+    de: >
+      Maschinelles Lernen ist ein Oberbegriff für die „künstliche“
+      Generierung von Wissen aus Erfahrung: Ein künstliches System
+      lernt aus Beispielen und kann diese nach Beendigung der
+      Lernphase verallgemeinern. Das heißt, es werden nicht einfach
+      die Beispiele auswendig gelernt, sondern es „erkennt“ Muster und
+      Gesetzmäßigkeiten in den Lerndaten.
+    en: >
+      Machine learning is the subfield of computer science that gives
+      computers the ability to learn without being explicitly
+      programmed (Arthur Samuel, 1959).
+    es: >
+      El aprendizaje automático o aprendizaje de máquinas (del inglés,
+      "Machine Learning") es el subcampo de las ciencias de la
+      computación y una rama de la inteligencia artificial cuyo
+      objetivo es desarrollar técnicas que permitan a las computadoras
+      aprender. De forma más concreta, se trata de crear programas
+      capaces de generalizar comportamientos a partir de una
+      información suministrada en forma de ejemplos.
+    fr: >
+      L'apprentissage automatique ou apprentissage statistique
+      (machine learning en anglais), champ d'étude de l'intelligence
+      artificielle, concerne la conception, l'analyse, le
+      développement et l'implémentation de méthodes permettant à une
+      machine (au sens large) d'évoluer par un processus systématique,
+      et ainsi de remplir des tâches difficiles ou problématiques à
+      remplir par des moyens algorithmiques plus classiques.

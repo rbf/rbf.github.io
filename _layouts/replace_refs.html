@@ -1,6 +1,7 @@
 ---
-# Jekyll layout that replaces
-# v0.2.0
+# Jekyll layout that replaces refs like [[ref_key]] with info
+# found in site.data.refs.ref_key.
+# v0.2.1
 # http://rbf.io/
 # © 2017 rbf
 # MIT License
@@ -30,8 +31,8 @@ ref_link:
         {% assign content = content | replace: expr, value_formatted %}
     {% endfor %}
     {% capture expr %}[[{{key}}]]{% endcapture %}
-    {% capture link_first_occurence %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}} {{layout.ref_link.first_occurrence_class}}" href="{{fields.url}}">{{field_name}}</a>{% endcapture %}
-    {% capture link %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}}" href="{{fields.url}}">{{field_name}}</a>{% endcapture %}
+    {% capture link_first_occurence %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}} {{layout.ref_link.first_occurrence_class}}" href="{{fields.website}}">{{field_name}}</a>{% endcapture %}
+    {% capture link %}<a class="{{layout.ref_link.class}} {{layout.ref_link.default_link_class}}" href="{{fields.website}}">{{field_name}}</a>{% endcapture %}
     {% assign content = content | replace_first: expr, link_first_occurence %}
     {% assign content = content | replace: expr, link %}
     {% capture expr %}(({{key}})){% endcapture %}

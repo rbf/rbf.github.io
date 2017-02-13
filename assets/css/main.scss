@@ -124,9 +124,6 @@ ul.tags {
   }
   li {
     display: inline;
-    @extend .colors-grey;
-    border-width: 1px;
-    border-style: solid;
     margin: {
       top:    0;
       bottom: 0;
@@ -188,8 +185,33 @@ ul.tags {
 }
 
 .tag {
+  @extend .colors-grey;
+  border-width: 0.09em;
+  border-style: solid;
+  padding: {
+    top:     0;
+    bottom:  0;
+    right:  .5em;
+    left:   .5em;
+  }
+  font-family: monospace;
   &.current-tag {
     @extend .colors-yellow;
+  }
+}
+
+.tag-posts-list {
+  .tag-info {
+    margin: {
+      bottom: 2em;
+    }
+    .description {
+      font-style: italic;
+    }
+    .links {
+      font-style: normal;
+      font-variant: small-caps;
+    }
   }
 }
 
