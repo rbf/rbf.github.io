@@ -1,7 +1,7 @@
 format:
   # SOURCE: http://www.fundeu.es/escribireninternet/como-se-escriben-las-fechas/
-  long_with_weekday:  "%wd%, %d% de %m% del %y%"
-  long:  "%d% de %m% del %y%"
+  long_with_weekday: "%wd%, %d% de %m% del %y%"
+  long: "%d% de %m% del %y%"
   long_without_year: "%d% de %m%"
   long_without_day: "%m% de %y%"
   short_with_weekday: "%wd%, %d% %m% %y%"

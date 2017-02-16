@@ -34,7 +34,7 @@ month:
     sep: setembre
     oct: octubre
     nov: novembre
-    dec: decembre
+    dec: desembre
 weekday:
   # The keys are as in {{ page.date | date: '%a' | downcase }}
   short:
