@@ -26,6 +26,8 @@ summary: >
   database-backed web applications. You will learn Rails by
   example by building a substantial sample application from
   scratch.
+redirect_from:
+    - /en/learning/2014/08/30/ruby-on-rails-tutorial/
 ---
 
 This fantastic course was my introduction to both [ruby](https://www.ruby-lang.org/)
