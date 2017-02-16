@@ -1,0 +1,93 @@
+format:
+  # SOURCE: http://alanwsmith.com/jekyll-liquid-date-formatting-examples
+  long_with_weekday: "%wd%, %m% %d%, %y%"
+  long: "%m% %d%, %y%"
+  long_without_year: "%m% %d%"
+  long_without_day: &long_without_day "%m% %y%"
+  short_with_weekday: "%wd%, %d% %m% %y%"
+  short: "%d% %m% %y%"
+  short_without_year: "%d% %m%"
+  short_without_day: *long_without_day
+month:
+  # The keys are as in {{ page.date | date: '%b' | downcase }}
+  short:
+    # The vals (only English) are as in {{ page.date | date: '%b'}}.
+    jan: Jan.
+    feb: Feb.
+    mar: Mar.
+    apr: Apr.
+    may: May
+    jun: Jun.
+    jul: Jul.
+    aug: Aug.
+    sep: Sep.
+    oct: Oct.
+    nov: Nov.
+    dec: Dec.
+  long:
+    # The vals (only English) are as in {{ page.date | date: '%B'}}
+    jan: January
+    feb: February
+    mar: March
+    apr: April
+    may: May
+    jun: June
+    jul: July
+    aug: August
+    sep: September
+    oct: October
+    nov: November
+    dec: December
+day:
+  long:
+    1:  1st
+    2:  2nd
+    3:  3rd
+    4:  4th
+    5:  5th
+    6:  6th
+    7:  7th
+    8:  8th
+    9:  9th
+    10: 10th
+    11: 11st
+    12: 12nd
+    13: 13rd
+    14: 14th
+    15: 15th
+    16: 16th
+    17: 17th
+    18: 18th
+    19: 19th
+    20: 20th
+    21: 21st
+    22: 22nd
+    23: 23rd
+    24: 24th
+    25: 25th
+    26: 26th
+    27: 27th
+    28: 28th
+    29: 29th
+    30: 30th
+    31: 31st
+weekday:
+  # The keys are as in {{ page.date | date: '%a' | downcase }}
+  short:
+    # The vals (only English) are as in {{ page.date | date: '%a'}}.
+    mon: Mon.
+    tue: Tue.
+    wed: Wed.
+    thu: Thu.
+    fri: Fri.
+    sat: Sat.
+    sun: Sun.
+  long:
+    # The vals (only English) are as in {{ page.date | date: '%A'}}
+    mon: Monday
+    tue: Tuesday
+    wed: Wednesday
+    thu: Thursday
+    fri: Friday
+    sat: Saturday
+    sun: Sunday

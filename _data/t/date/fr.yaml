@@ -1,0 +1,57 @@
+format:
+  # SOURCE: https://fr.wikipedia.org/wiki/Date
+  long_with_weekday: &long_with_weekday "%wd% %d% %m% %y%"
+  long: &long "%d% %m% %y%"
+  long_without_year: &long_without_year "%d% %m%"
+  long_without_day: &long_without_day "%m% %y%"
+  short_with_weekday: *long_with_weekday
+  short: *long
+  short_without_year: *long_without_year
+  short_without_day: *long_without_day
+month:
+  # The keys are as in {{ page.date | date: '%b' | downcase }}
+  # SOURCE: https://fr.wikipedia.org/wiki/Mois#Abr.C3.A9viations
+  short:
+    jan: janv.
+    feb: févr.
+    mar: mars
+    apr: avr.
+    may: mai
+    jun: juin
+    jul: juill.
+    aug: août
+    sep: sept.
+    oct: oct.
+    nov: nov.
+    dec: déc.
+  long:
+    jan: janvier
+    feb: février
+    mar: mars
+    apr: avril
+    may: mai
+    jun: juin
+    jul: juillet
+    aug: août
+    sep: septembre
+    oct: octobre
+    nov: novembre
+    dec: décembre
+weekday:
+  # The keys are as in {{ page.date | date: '%a' | downcase }}
+  short:
+    mon: lu.
+    tue: ma.
+    wed: me.
+    thu: je.
+    fri: ve.
+    sat: sa.
+    sun: di.
+  long:
+    mon: lundi
+    tue: mardi
+    wed: mercredi
+    thu: jeudi
+    fri: vendredi
+    sat: samedi
+    sun: dimanche

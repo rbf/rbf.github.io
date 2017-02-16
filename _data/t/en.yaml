@@ -1,0 +1,30 @@
+category:
+  blog: blog
+  photo: photo
+tag:
+  jekyll: jekyll
+word:
+  by: by
+  _on: 'on' # 'on' without quotes is a keyword equivalent to 'true'
+  duration: duration
+  approx: about
+  done_on: done on
+  done_between: done between
+  and: and
+  website: website
+  wikipedia: wikipedia
+  repo: repo
+  documentation: documentation
+sentence:
+  original_content_html: >
+    This is the URL of the version I used. The original content can be found
+    <a href="%URL%">here</a>.
+unit:
+  hour: hour
+  hours: hours
+  day: day
+  days: days
+  week: week
+  weeks: weeks
+  page: page
+  pages: pages

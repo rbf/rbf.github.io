@@ -1,0 +1,67 @@
+{% capture result %}
+
+{%comment%}{%raw%}
+  file:
+    /_includes/date
+  usage:
+    {% include date %}
+     => <time datetime="2017-02-15T22:10:15+09:00" title="Wednesday, 15 February 2017">15 Feb. 2017</time>
+    {% include date plain=true %}
+     => 15 Feb. 2017
+    {% include date plain=true date='2015-07-01' %}
+     => 1 Jul. 2015
+    {% include date plain=true date='2015-07-01' format='long_with_weekday' %}
+     => Wednesday, 1 July 2015
+    {% include date plain=true date='2015-07-01' format='long_with_weekday' lang='es' %}
+     => miércoles, 1 de julio del 2015
+    {% include date plain=true date='2015-07-01' format='long_with_weekday' lang='es' capitalize=true %}
+     => Miércoles, 1 de julio del 2015
+    {% include date plain=true date='2015-07-01' format='non_existent_format' lang='es' %}
+     => <span style="font-family:monospace;background:yellow;"> Date format "non_existent_format" for language "es" not found!</span>
+{%endraw%}{%endcomment%}
+
+{%comment%}
+The scope of Liquid variables seems to be always global, so that to prevent
+conflicts we cache the variables with names that might be setup outside this file,
+and we restore them before returning.
+{%endcomment%}
+{% assign original_current_lang = current_lang %}
+{% assign original_lang = lang %}
+{% assign original_date = date %}
+{% assign original_t = t %}
+
+{% assign current_lang = page.url | slice: 1, 2 %}
+{% assign lang = include.lang | default: current_lang | default: site.lang %}
+{% assign date = include.date | default: post.date | default: page.date | default: site.time %}
+
+{% assign t = site.data.t.date[lang] %}
+{% assign format_name = include.format | default: 'short' %}
+{% assign format = t.format[format_name] %}
+{% unless format %}
+  {% capture format %}<span style="font-family:monospace;background:yellow;"> Date format "{{format_name}}" for language "{{lang}}" not found!</span>{% endcapture %}
+{% endunless %}
+{% assign format_base = format_name | split: '_' | first %}
+
+{% assign d_int   = date | date: "%-d" | to_integer %}
+{% assign d = t.day[format_base][d_int] | default: d_int %}
+{% assign wd = date | date: "%a" | downcase %}
+{% assign m  = date | date: '%b' | downcase %}
+{% assign y  = date | date: "%Y" %}
+{% assign current_year = site.time | date: "%Y" %}
+
+{% assign formatted_date = format | replace: '%wd%', t.weekday[format_base][wd] | replace: '%d%', d | replace: '%m%', t.month[format_base][m] | replace: '%y%', y %}
+{% if include.capitalize %}
+  {% assign formatted_date = formatted_date | capitalize %}
+{% endif %}
+
+{% if include.plain %}
+  {{formatted_date}}
+{% else %}
+  {% assign tooltip_date = t.format.long_with_weekday | replace: '%wd%', t.weekday.long[wd] | replace: '%d%', d | replace: '%m%', t.month.long[m] | replace: '%y%', y %}
+  <time datetime="{{ date | date_to_xmlschema }}" title="{{tooltip_date}}">{{formatted_date}}</time>
+{% endif %}
+{% assign current_lang = original_current_lang %}
+{% assign lang = original_lang %}
+{% assign date = original_date %}
+{% assign t = original_t %}
+{% endcapture %}{{result | strip}}

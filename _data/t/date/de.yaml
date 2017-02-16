@@ -1,0 +1,59 @@
+format:
+  # SOURCE: https://deutsch.lingolia.com/de/wortschatz/zahlen-datum-uhrzeit/datum
+  long_with_weekday: &long_with_weekday "%wd%, %d%. %m% %y%"
+  long: &long "%d%. %m% %y%"
+  long_without_year: &long_without_year "%d%. %m%"
+  long_without_day: &long_without_day "%m% %y%"
+  short_with_weekday: *long_with_weekday
+  short: *long
+  short_without_year: *long_without_year
+  short_without_day: *long_without_day
+month:
+  # The keys are as in {{ page.date | date: '%b' | downcase }}
+  short:
+    # SOURCE: https://de.wikipedia.org/wiki/Monat#Kurzformen
+    jan: Jan.
+    feb: Febr.
+    mar: März
+    apr: Apr.
+    may: Mai
+    jun: Juni
+    jul: Juli
+    aug: Aug.
+    sep: Sept.
+    oct: Okt.
+    nov: Nov.
+    dec: Dez.
+  long:
+    # SOURCE: https://de.wikipedia.org/wiki/Monat#Monatsnamen
+    jan: Januar
+    feb: Februar
+    mar: März
+    apr: April
+    may: Mai
+    jun: Juni
+    jul: Juli
+    aug: August
+    sep: September
+    oct: Oktober
+    nov: November
+    dec: Dezember
+weekday:
+  # The keys are as in {{ page.date | date: '%a' | downcase }}
+  short:
+    mon: Mo.
+    tue: Di.
+    wed: Mi.
+    thu: Do.
+    fri: Fr.
+    sat: Sa.
+    sun: So.
+  long:
+    # SOURCE: https://de.wikipedia.org/wiki/Wochentag#Deutsche_Wochentagsnamen
+    mon: Montag
+    tue: Dienstag
+    wed: Mittwoch
+    thu: Donnerstag
+    fri: Freitag
+    sat: Samstag
+    sun: Sonntag

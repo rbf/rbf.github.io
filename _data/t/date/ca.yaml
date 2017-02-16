@@ -1,0 +1,55 @@
+format:
+  long_with_weekday: &long_with_weekday "%wd%, %d% %m% %y%"
+  long: &long "%d% %m% %y%"
+  long_without_year: &long_without_year "%d% %m%"
+  long_without_day: &long_without_day "%m% %y%"
+  short_with_weekday: *long_with_weekday
+  short: *long
+  short_without_year: *long_without_year
+  short_without_day: *long_without_day
+month:
+  # The keys are as in {{ page.date | date: '%b' | downcase }}
+  short:
+    jan: gen.
+    feb: feb.
+    mar: mar.
+    apr: abr.
+    may: mai.
+    jun: jun.
+    jul: jul.
+    aug: ago.
+    sep: set.
+    oct: oct.
+    nov: nov.
+    dec: dec.
+  long:
+    jan: gener
+    feb: febrer
+    mar: març
+    apr: abril
+    may: maig
+    jun: juny
+    jul: juliol
+    aug: agost
+    sep: setembre
+    oct: octubre
+    nov: novembre
+    dec: decembre
+weekday:
+  # The keys are as in {{ page.date | date: '%a' | downcase }}
+  short:
+    mon: dl.
+    tue: dm.
+    wed: dx.
+    thu: dj.
+    fri: dv.
+    sat: ds.
+    sun: dg.
+  long:
+    mon: dilluns
+    tue: dimarts
+    wed: dimecres
+    thu: dijous
+    fri: divendres
+    sat: dissabte
+    sun: diumenge

@@ -1,0 +1,58 @@
+format:
+  # SOURCE: http://www.fundeu.es/escribireninternet/como-se-escriben-las-fechas/
+  long_with_weekday:  "%wd%, %d% de %m% del %y%"
+  long:  "%d% de %m% del %y%"
+  long_without_year: "%d% de %m%"
+  long_without_day: "%m% de %y%"
+  short_with_weekday: "%wd%, %d% %m% %y%"
+  short: "%d% %m% %y%"
+  short_without_year: "%d% %m%"
+  short_without_day: "%m% %y%"
+month:
+  # The keys are as in {{ page.date | date: '%b' | downcase }}
+  short:
+    # SOURCE: http://www.fundeu.es/escribireninternet/abreviaturas-de-los-meses-y-los-dias-de-la-semana/
+    jan: en.
+    feb: febr.
+    mar: mzo.
+    apr: abr.
+    may: my.
+    jun: jun.
+    jul: jul.
+    aug: ag.
+    sep: set.
+    oct: oct.
+    nov: nov.
+    dec: dic.
+  long:
+    jan: enero
+    feb: febrero
+    mar: marzo
+    apr: abril
+    may: mayo
+    jun: junio
+    jul: julio
+    aug: agosto
+    sep: septiembre
+    oct: octubre
+    nov: noviembre
+    dec: diciembre
+weekday:
+  # The keys are as in {{ page.date | date: '%a' | downcase }}
+  short:
+    # SOURCE: http://www.fundeu.es/escribireninternet/abreviaturas-de-los-meses-y-los-dias-de-la-semana/
+    mon: lu.
+    tue: ma.
+    wed: mi.
+    thu: ju.
+    fri: vi.
+    sat: sá.
+    sun: do.
+  long:
+    mon: lunes
+    tue: martes
+    wed: miércoles
+    thu: jueves
+    fri: viernes
+    sat: sábado
+    sun: domingo

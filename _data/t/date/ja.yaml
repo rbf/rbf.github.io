@@ -1,0 +1,92 @@
+format:
+  # SOURCE: https://en.wikipedia.org/wiki/Date_and_time_notation_in_Japan
+  long_with_weekday: "%y%年%m%月%d%日%wd%日"
+  long: &long "%y%年%m%月%d%日"
+  long_without_year: &long_without_year "%m%月%d%日"
+  long_without_day: &long_without_day "%y%年%m%月"
+  short_with_weekday: "%y%年%m%月%d%日(%wd%)"
+  short: *long
+  short_without_year: *long_without_year
+  short_without_day: *long_without_day
+month:
+  # The keys are as in {{ page.date | date: '%b' | downcase }}
+  # SOURCE: https://en.wikipedia.org/wiki/Japanese_calendar
+  short:
+    jan: 1
+    feb: 2
+    mar: 3
+    apr: 4
+    may: 5
+    jun: 6
+    jul: 7
+    aug: 8
+    sep: 9
+    oct: 10
+    nov: 11
+    dec: 12
+  long:
+    jan: 一
+    feb: 二
+    mar: 三
+    apr: 四
+    may: 五
+    jun: 六
+    jul: 七
+    aug: 八
+    sep: 九
+    oct: 十
+    nov: 十一
+    dec: 十二
+day:
+  # SOURCE: https://en.wikipedia.org/wiki/Japanese_calendar
+  long:
+    1:  一
+    2:  二
+    3:  三
+    4:  四
+    5:  五
+    6:  六
+    7:  七
+    8:  八
+    9:  九
+    10: 十
+    11: 十一
+    12: 十二
+    13: 十三
+    14: 十四
+    15: 十五
+    16: 十六
+    17: 十七
+    18: 十八
+    19: 十九
+    20: 二十
+    21: 二十一
+    22: 二十二
+    23: 二十三
+    24: 二十四
+    25: 二十五
+    26: 二十六
+    27: 二十七
+    28: 二十八
+    29: 二十九
+    30: 三十
+    31: 三十一
+weekday:
+  # The keys are as in {{ page.date | date: '%a' | downcase }}
+  # SOURCE: https://en.wikipedia.org/wiki/Japanese_calendar
+  short:
+    mon: 月
+    tue: 火
+    wed: 水
+    thu: 木
+    fri: 金
+    sat: 土
+    sun: 日
+  long:
+    mon: 月曜
+    tue: 火曜
+    wed: 水曜
+    thu: 木曜
+    fri: 金曜
+    sat: 土曜
+    sun: 日曜

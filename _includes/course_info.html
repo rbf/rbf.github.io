@@ -10,8 +10,11 @@
 {% unless price %}
     {% assign price = learning.price['purchase'].description[lang] | append: ' ' | append: page.price %}
 {% endunless %}
-{% assign start_date = page.start_date | date: '%b %Y' %}
-{% assign end_date = page.date | date: '%b %Y' %}
+{% capture start_date %}{% include date date=page.start_date format='short_without_day' %}{% endcapture %}
+{% capture end_date %}{% include date date=page.date format='short_without_day' %}{% endcapture %}
+{% assign start_date_display = start_date | split: '>' %}
+{% assign end_date_display = end_date | split: '>' %}
+{% if start_date_display[1] == end_date_display[1] %}{% assign start_and_end_date_in_same_month = true %}{%endif%}
 {% assign duration = page.duration.approx.value | append: ' ' | append: tu[page.duration.approx.unit] %}
 
 <div class="course-info">
@@ -31,8 +34,8 @@
                 {{t._on}} <a class="provider" href="{{provider.url}}">{{provider.name}}</a>
             {% endif %}
             ●
-            {% if start_date == end_date %}
-                <span class="dates">{{t.done_on | capitalize}} {{start_date}}</span>
+            {% if start_and_end_date_in_same_month %}
+                <span class="dates">{{t.done_on | capitalize}} {{end_date}}</span>
             {% else %}
                 <span class="dates">{{t.done_between | capitalize}} {{start_date}} {{t.and}} {{end_date}}</span>
             {% endif %}

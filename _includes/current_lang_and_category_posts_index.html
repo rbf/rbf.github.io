@@ -6,7 +6,7 @@
 {% else %}
     {% assign current_lang_category_posts = site.categories[current_lang] | where_exp:"post","post.categories contains current_category" %}
 {% endif %}
-<h1>{{ site.data.t[current_lang].category[current_category] | capitalize }}</h1>
+<h1>{{ site.data.t[current_lang].category[current_category] | default: current_category | capitalize }}</h1>
 <div class="grid post-list">
   {% for post in current_lang_category_posts %}
     {% assign distinct_categories = '' | split:'' %}
@@ -16,7 +16,7 @@
       {% endunless %}
     {% endfor %}
     <div class="post-item">
-      <span class="post-meta col-2-12">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <span class="post-meta col-2-12">{% include date %}</span>
       <div class="col-10-12">
         {% include draft_label.html %}
         {% unless distinct_categories.size == 0 %}
