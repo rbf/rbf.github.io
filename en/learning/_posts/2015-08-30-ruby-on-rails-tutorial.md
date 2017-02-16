@@ -8,7 +8,7 @@ author:       michael-hartl
 organisation: addison-wesley-professional
 provider:     safari
 price:        requires-subscription-with-provider
-start_date:   2014-08-15
+start_date:   2015-08-15
 type:         online
 support:      video ebook
 level:        beginner
