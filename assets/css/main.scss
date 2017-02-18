@@ -209,6 +209,9 @@ ul.tags {
     left:   .5em;
   }
   font-family: monospace;
+  &.learning-type-tag:not(.current-tag) {
+    @extend .colors-blue;
+  }
   &.current-tag {
     @extend .colors-yellow;
   }

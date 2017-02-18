@@ -5,12 +5,11 @@ author:       susan-simkins
 provider:     pluralsight
 price:        requires-subscription-with-provider
 start_date:   2017-02-06
-type:         online
 support:      video
 level:        beginner
 myrating:     5/5
 release_date: 2014-10-26
-tags:         css html webdev
+tags:         video css html webdev
 duration:
   exact:      00:50h
   approx:

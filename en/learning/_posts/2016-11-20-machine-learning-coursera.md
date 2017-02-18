@@ -6,13 +6,12 @@ organisation: stanford-university
 provider:     coursera
 price:        free-with-payed-certificate
 start_date:   2016-09-08
-type:         online
 support:      video scripts code
 level:        beginner
 myrating:     5/5
 release_date: 2011
 certificate_url: https://pinboard.in/u:rbf/b:4b6b6875eb55
-tags:         machinelearning ai
+tags:         mooc machinelearning ai
 duration:
   approx:
     value:    11

@@ -9,12 +9,11 @@ organisation: addison-wesley-professional
 provider:     safari
 price:        requires-subscription-with-provider
 start_date:   2015-08-15
-type:         online
 support:      video ebook
 level:        beginner
 myrating:     5/5
 release_date: 2015-04-01
-tags:         code html webdev rails ruby
+tags:         video code html webdev rails ruby
 duration:
   approx:
     value:    15

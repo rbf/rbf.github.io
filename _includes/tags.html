@@ -1,7 +1,9 @@
+{% capture result %}
 {% assign current_lang = page.url | slice: 1, 2 %}
 {% assign tags = post.tags | default: page.tags %}
 {% if tags %}
   <ul class="tags" title="tags">
-    {% for tag in tags %}<li class="tag{% if include.current_tag == tag %} current-tag{% endif %}"><a href="/{{current_lang}}/tags/#{{tag}}">{{site.data.t[current_lang].tag[tag] | default: tag}}</a></li>{% endfor %}
+    {% for tag in tags %}<li class="tag{% if include.current_tag == tag %} current-tag{% endif %}{% if site.data.learning.type_tags contains tag %} learning-type-tag{% endif %}"><a href="/{{current_lang}}/tags/#{{tag}}">{{site.data.t[current_lang].tag[tag] | default: tag}}</a></li>{% endfor %}
   </ul>
 {% endif %}
+{% endcapture %}{{ result | strip }}

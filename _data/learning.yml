@@ -1,3 +1,10 @@
+# Following tags are considered "Learning types". Details and URLs can be found
+# in the refs.yaml file.
+type_tags:
+  - book
+  - mooc
+  - video
+
 provider:
 
   safari:
@@ -94,6 +101,7 @@ author:
     wikipedia:
       en: https://en.wikipedia.org/wiki/James_Heisig
       es: https://es.wikipedia.org/wiki/James_Heisig
+
 
 organisation:
 

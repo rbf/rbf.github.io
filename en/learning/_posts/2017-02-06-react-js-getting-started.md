@@ -5,12 +5,11 @@ author:       samer-buna
 provider:     pluralsight
 price:        requires-subscription-with-provider
 start_date:   2017-02-05
-type:         online
 support:      video
 level:        beginner
 myrating:     5/5
 release_date: 2015-06-13
-tags:         code html javascript webdev react
+tags:         video code html javascript webdev react
 duration:
   exact:      01:29h
   approx:

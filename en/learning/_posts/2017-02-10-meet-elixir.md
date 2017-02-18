@@ -6,12 +6,11 @@ author:       jose-valim
 provider:     pluralsight
 price:        requires-subscription-with-provider
 start_date:   2017-02-08
-type:         online
 support:      video
 level:        beginner
 myrating:     4.5/5
 release_date: 2013-06-18
-tags:         code elixir erlang ruby
+tags:         video code elixir erlang ruby
 duration:
   exact:      02:05h
   approx:

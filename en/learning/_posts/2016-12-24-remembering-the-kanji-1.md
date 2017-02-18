@@ -10,12 +10,11 @@ organisation: university-of-hawaii-press
 provider:     ibook
 price:        24.99 USD
 start_date:   2016-09-13
-type:         book
 support:      ebook
 level:        intermediate
 myrating:     5/5
 release_date: 2010-03-01
-tags:         japanese language kanji rtk1
+tags:         book japanese language kanji rtk1
 duration:
   approx:
     value:    480
