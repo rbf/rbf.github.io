@@ -233,16 +233,21 @@ ul.tags {
 }
 
 .post-item {
-  .post-link {
-    @extend a.unobtrusive;
-    display: inline-block;
-  }
-  .post-distinct-categories {
-    @extend .post-link;
-    opacity: .3;
-  }
-  &:hover .post-distinct-categories {
-    opacity: inherit;
+  .post-link-container {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    .post-link {
+      @extend a.unobtrusive;
+      display: inline;
+    }
+    .post-distinct-categories {
+      @extend .post-link;
+      opacity: .3;
+    }
+    &:hover .post-distinct-categories {
+      opacity: inherit;
+    }
   }
 }
 
