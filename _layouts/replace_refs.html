@@ -23,7 +23,7 @@ ref_link:
 {% for ref in site.data.refs %}
     {% assign key = ref[0] %}
     {% assign fields = ref[1] %}
-    {% assign field_name = fields.name | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip %}
+    {% assign field_name = fields.name | default: key | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip %}
     {% for field in fields %}
         {% assign subkey = field[0] %}
         {% assign value = field[1][page_lang] | default: field[1][site.lang] | default: field[1] | strip %}
