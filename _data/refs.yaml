@@ -59,6 +59,11 @@ javascript:
       production; the majority of websites employ it, and all modern
       Web browsers support it without the need for plug-ins.
 
+jses6:
+  name: JavaScript ES6
+  website: https://www.javascript.com
+
+
 coffeescript:
   name: CoffeeScript
   website: http://coffeescript.org/
@@ -190,6 +195,32 @@ react:
       React is a declarative, efficient, and flexible JavaScript
       library for building user interfaces.
 
+redux:
+  name: Redux
+  website: http://redux.js.org/
+  repo: https://github.com/reactjs/redux
+  description:
+    en: >
+      Redux is a predictable state container for JavaScript apps. It
+      helps you write applications that behave consistently, run in
+      different environments (client, server, and native), and are
+      easy to test. On top of that, it provides a great developer
+      experience, such as live code editing combined with a time
+      traveling debugger. You can use Redux together with React, or
+      with any other view library. It is tiny (2kB, including
+      dependencies).
+
+reduxsaga:
+  name: "`redux-saga`"
+  website: https://redux-saga.js.org/
+  repo: https://github.com/redux-saga/redux-saga
+  description:
+    en: >
+      `redux-saga` is a library that aims to make side effects (i.e.
+      asynchronous things like data fetching and impure things like
+      accessing the browser cache) in React/Redux applications easier
+      and better.
+
 jsx:
   name: JSX
   website: https://facebook.github.io/react/docs/jsx-in-depth.html
@@ -293,3 +324,57 @@ machinelearning:
       machine (au sens large) d'évoluer par un processus systématique,
       et ainsi de remplir des tâches difficiles ou problématiques à
       remplir par des moyens algorithmiques plus classiques.
+
+meetup:
+  name: Meetup
+  website: https://www.meetup.com
+  about: https://www.meetup.com/about/
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/Meetup_(website)
+    es: https://es.wikipedia.org/wiki/Meetup
+    fr: https://fr.wikipedia.org/wiki/Meetup.com
+  description:
+    en: >
+      Meetup is an online social networking portal that facilitates
+      offline group meetings in various localities around the world.
+      Meetup allows members to find and join groups unified by a
+      common interest, such as politics, books, games, movies, health,
+      pets, careers or hobbies.
+    es: >
+      Meetup.com (también llamado simplemente Meetup) es una
+      plataforma de redes sociales creado por Scott Heiferman, Matt
+      Meeker y Peter Kamali en el año 2002. Meetup permite a sus
+      miembros reunirse en la vida real via grupos unidos por un
+      interés común como política, deporte, cultura, senderismo,
+      libros, tecnología, lenguajes y otros treinta temas.
+    fr: >
+      Meetup.com (aussi appelé simplement Meetup) est une platforme de
+      réseautage social créé par Scott Heiferman, Matt Meeker et Peter
+      Kamali en 2002. Meetup permet aux membres de rencontrer des
+      groupes unis par un intérêt commun, tels que l’engagement
+      politique, le sport, la culture, la technologie, les loisirs,
+      les langues et une trentaine d'autres sujets, ainsi que par
+      zones géographiques. Les organisateurs des groupes proposent
+      alors des événements variés durant lesquels se déroulent les
+      échanges entre les membres, qui s'effectuent en personne.
+
+dekki:
+  website: http://dekki.com
+  description:
+    en: >
+      Gaming platform from PlayBrain.
+
+playbrain:
+  name: PlayBrain
+  website: http://playbrain.co
+  description:
+    en: >
+      Gaming company in Tokyo.
+
+algolia:
+  website: http://algolia.com
+  description:
+  en: >
+    Search backend as a service.
+
+

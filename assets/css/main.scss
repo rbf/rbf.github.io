@@ -17,6 +17,11 @@ body {
   }
 }
 
+blockquote {
+  letter-spacing: -0.5px;
+  font-weight: 200;
+}
+
 .post-content {
   h1 { font-size: 3em; }
   h2 { font-size: 2em; }
@@ -310,6 +315,13 @@ html, body {
   }
 }
 
+code {
+  // NOTE: 0.833em are equivalent to a 15px within an element with font-size of
+  //       18px. This alows to dinamically use code elements within other
+  //       contexts, like titles.
+  font-size: 0.833em;
+}
+
 $provider-logo-width: 64px;
 $course-info-padding: 32px;
 .course-info {
@@ -323,6 +335,7 @@ $course-info-padding: 32px;
     min-height: $provider-logo-width + $course-info-padding;
     .provider-logo img {
       @extend .hidden-sm;
+      background: white;
       width: $provider-logo-width;
       height: $provider-logo-width;
       float: left;

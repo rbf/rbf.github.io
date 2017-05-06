@@ -29,7 +29,7 @@
         <div class="tag-info">
             <p class="description">(({{tag}}.description))</p>
             <div class="links">
-                {% assign possible_tag_links = 'website|repo|documentation|wikipedia' | split: '|' %}
+                {% assign possible_tag_links = 'website|about|repo|documentation|wikipedia' | split: '|' %}
                 {% assign existent_tag_links = '' | split: '' %}
                 {% for tl in possible_tag_links %}
                     {% if tag_ref[tl] %}

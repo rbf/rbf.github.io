@@ -1,6 +1,7 @@
-# Following tags are considered "Learning types". Details and URLs can be found
-# in the refs.yaml file.
+# Following tags are considered "Learning types". Details and URLs (if any)
+# can be found in the refs.yaml file.
 type_tags:
+  - talk
   - book
   - mooc
   - video
@@ -26,6 +27,11 @@ provider:
     name: Apple iBook
     url:  https://www.apple.com/ibooks/
     logo: /images/logos/ibooks.png
+
+  meetup:
+    name: Meetup
+    url:  https://www.meetup.com/
+    logo: /images/logos/meetup.png
 
 
 price:
@@ -64,43 +70,50 @@ author:
   #       book, but e.g. the main teacher in an online video course.
 
   michael-hartl:
-    name: Michael Hartl
-    url:  https://www.railstutorial.org
+    name:     Michael Hartl
+    url:      https://www.railstutorial.org
     homepage: http://www.michaelhartl.com
 
   andrew-ng:
-    name: Andrew Ng
-    url:  http://online.stanford.edu/instructors/andrew-ng
+    name:     Andrew Ng
+    url:      http://online.stanford.edu/instructors/andrew-ng
     homepage: http://www.andrewng.org
     wikipedia:
-      en: https://en.wikipedia.org/wiki/Andrew_Ng
-      es: https://es.wikipedia.org/wiki/Andrew_Ng
+      en:     https://en.wikipedia.org/wiki/Andrew_Ng
+      es:     https://es.wikipedia.org/wiki/Andrew_Ng
 
   arvind-narayanan:
-    name: Arvind Narayanan
-    url:  https://www.cs.princeton.edu/people/profile/arvindn
+    name:     Arvind Narayanan
+    url:      https://www.cs.princeton.edu/people/profile/arvindn
     homepage: http://randomwalker.info
 
   samer-buna:
-    name: Samer Buna
-    url:  https://app.pluralsight.com/profile/author/samer-buna
+    name:     Samer Buna
+    url:      https://app.pluralsight.com/profile/author/samer-buna
 
   susan-simkins:
-    name: Susan Simkins
-    url:  https://app.pluralsight.com/profile/author/susan-simkins
+    name:     Susan Simkins
+    url:      https://app.pluralsight.com/profile/author/susan-simkins
 
   jose-valim:
-    name: Jose Valim
-    url:  https://app.pluralsight.com/profile/author/jose-valim
-    twitter: https://twitter.com/josevalim
-    github: https://github.com/josevalim
+    name:     Jose Valim
+    url:      https://app.pluralsight.com/profile/author/jose-valim
+    twitter:  https://twitter.com/josevalim
+    github:   https://github.com/josevalim
 
   james-heisig:
-    name: James W. Heisig
-    url:  http://nirc.nanzan-u.ac.jp/en/staff/jheisig/
+    name:     James W. Heisig
+    url:      http://nirc.nanzan-u.ac.jp/en/staff/jheisig/
     wikipedia:
-      en: https://en.wikipedia.org/wiki/James_Heisig
-      es: https://es.wikipedia.org/wiki/James_Heisig
+      en:     https://en.wikipedia.org/wiki/James_Heisig
+      es:     https://es.wikipedia.org/wiki/James_Heisig
+
+  steven-sacks:
+    name:     Steven Sacks
+    url:      http://playbrain.co/story/
+    company:  PlayBrain
+    title:    Director of Engineering
+    twitter:  https://twitter.com/stevensacks
 
 
 organisation:
