@@ -27,7 +27,7 @@ blockquote {
   h2 { font-size: 2em; }
 }
 
-a.unobtrusive {
+.unobtrusive {
   color: inherit;
   &:hover {
     text-decoration: none;
@@ -36,7 +36,7 @@ a.unobtrusive {
 
 .ref-link-replaced {
   &:not(.ref-link-first-occurence) {
-    @extend a.unobtrusive;
+    @extend .unobtrusive;
   }
 }
 
@@ -243,7 +243,7 @@ ul.tags {
     text-overflow: ellipsis;
     white-space: nowrap;
     .post-link {
-      @extend a.unobtrusive;
+      @extend .unobtrusive;
       display: inline;
     }
     .post-distinct-categories {
