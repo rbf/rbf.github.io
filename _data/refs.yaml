@@ -183,6 +183,27 @@ ruby:
 
 # Programming libraries and related refs
 
+rails:
+  name: Rails
+  website: http://rubyonrails.org
+  repo: https://github.com/rails/rails
+  github_releases_url: https://github.com/rails/rails/releases
+  documentation: http://guides.rubyonrails.org
+  description:
+    en: >
+      Ruby on Rails, or Rails, is a server-side web application
+      framework written in Ruby under the MIT License. Rails is a
+      model–view–controller (MVC) framework, providing default
+      structures for a database, a web service, and web pages.
+  wikipedia:
+    ca: https://ca.wikipedia.org/wiki/Ruby_on_Rails
+    de: https://de.wikipedia.org/wiki/Ruby_on_Rails
+    en: https://en.wikipedia.org/wiki/Ruby_on_Rails
+    es: https://es.wikipedia.org/wiki/Ruby_on_Rails
+    fr: https://fr.wikipedia.org/wiki/Ruby_on_Rails
+    ja: https://ja.wikipedia.org/wiki/Ruby_on_Rails
+
+
 react:
   name: React
   website: https://facebook.github.io/react/
@@ -376,5 +397,16 @@ algolia:
   description:
   en: >
     Search backend as a service.
+
+cloud9:
+  name: Cloud9 IDE
+  website: https://c9.io
+  description:
+    en: >
+      Cloud9 (aka c9.io) is an online IDE with integrated terminal that
+      runs on the browser.
+  wikipedia:
+    en: https://en.wikipedia.org/wiki/Cloud9_IDE
+
 
 
