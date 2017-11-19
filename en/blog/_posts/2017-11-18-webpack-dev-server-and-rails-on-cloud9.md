@@ -6,43 +6,41 @@ subtitle: >
 tags: webpack react javascript rails cloud9
 ---
 
-For a while I've been trying to use [`webpack-dev-server`] to serve
-the [[react]] frontend within a [[rails]] app on my [[cloud9]]
-workspace without much success. But eventually I got to the point
-where not being able to use it was very frustrating because the dev
-server really speeds up the feedback loop while developing [[react]]
-web applications. Therefore it became a priority to make it work.
-While I did find a lot of interesting information in some GitHub
-issues (see [Sources](#sources) section below), the solutions
-mentioned did not quite work for me, probably because the underlying
-versions were not the same. In this article I explain how I got it
-finally working.
+For a while I have been trying here and there to properly configure
+[`webpack-dev-server`] to serve the [[react]] frontend within a
+[[rails]] app on my [[cloud9]] workspace without much success. But
+eventually the frustration of not having the speed benefits of the
+live compilation made it a priority to fix. While I did find a lot of
+helpful information online (specially in a couple of GitHub issues,
+see [sources](#sources) below), the solutions mentioned did not quite
+work for me, probably because the underlying versions were not the
+same. In this article I explain how I got it finally working.
 
-Note that the solution that this article details is for a [[react]]
-frontend within a [[rails]] app. This is a bit different than a pure
-[[react]] app written only in [[javascript]] because the integration
-of the [`webpack-dev-server`] with the [[rails]] app is ensured by the
+Note that the solutions in this article are for a [[react]] frontend
+within a [[rails]] app. This is a bit different than a pure [[react]]
+app written only in [[javascript]] because the integration of the
+[`webpack-dev-server`] with the [[rails]] app is ensured by the
 [`webpacker`] gem, which handles the configuration in a slightly
 different way. However, the approaches mentioned here might serve as a
 basis to solve it for the pure [[javascript]] case.
 
 Note as well that this explanation is **not** about the [Hot Module
 Replacement (HMR)] that automatically updates the app in the browser
-without reloading. Instead it is about the life compilation of the
+without reloading. Instead it is about the live compilation of the
 [[javascript]] code that the [`webpack-dev-server`] offers, which is
-very fast compared to the on-demand compilation, which can become very
-slow when the size of the [[javascript]] codebase increases (see the
+very fast compared to the on-demand compilation, which becomes slower
+when the size of the [[javascript]] codebase increases (see the
 [`webpacker` documentation]). In my case the on-demand compilation
 ended up taking more than 30s, which was highly inconvenient: i.e.
 every time I changed a [[javascript]] code in a [[react]] component,
-the served compiled the _whole_ [[javascript]] code when I refreshed
-the app in the browser and took more than 30s to respond.
+the server compiled the _whole_ [[javascript]] code when I refreshed
+the app in the browser thus taking that long to respond.
 
-I will explain two ways to tackle the issue: a [quick and simple
-solution](#quick-solution), which is enough if we work alone on a
-project, and [a more involved but flexible approach](#flexible-
-solution), that can be useful when several people might work in the
-same codebase.
+I will discuss two ways to tackle the issue: a simple and [quick
+solution](#quick-solution), which is sufficient if we work alone on a
+project, and a slightly more involved but [flexible
+approach](#flexible-solution), that can be useful when several people
+might work in the same codebase.
 
 [Hot Module Replacement (HMR)]: https://webpack.github.io/docs/hot-module-replacement-with-webpack.html
 [`webpack-dev-server`]: https://github.com/webpack/webpack-dev-server
@@ -57,7 +55,7 @@ to modify the `development.dev_server` entry of the
 
 ## `/etc/hosts` entry
 
-As mentioned in some of the sources [below](#sources), you have to add
+As mentioned in some of the [sources](#sources) below, you have to add
 an entry to [`/etc/hosts`](https://askubuntu.com/a/183187) to alias
 the hostname of your [[cloud9]] workspace to `0.0.0.0`:
 
@@ -76,7 +74,7 @@ source ~/.bashrc
 
 ## `config/webpacker.yml` file
 
-After trying many solutions mentioned in the sources [below](#sources)
+After trying many solutions mentioned in the [sources](#sources) below
 I ended up changing the `development.dev_server` entry of the
 `config/webpacker.yml` file from the following default values:
 
@@ -109,16 +107,49 @@ dev_server:
   use_local_ip: false
 ```
 
-You can get the value `your-workspace-name-yourusername.c9users.io`
+You can obtain the value `your-workspace-name-yourusername.c9users.io`
 for your [[cloud9]] workspace with `echo ${C9_HOSTNAME}`.
 
-Note that some comments in the mentioned [sources](#sources), required
-the `https` option to be set to `false`, but it only worked for me
-with both `https: true` and `inline: false`.
+There are three main differences with the approaches found in the
+mentioned [sources](#sources):
 
-With this configuration, running `./bin/webpack-dev-server` in one
-terminal and `.bin/rails s -b $IP -p $PORT` in another terminal as
-usual did work for me. (Finally!)
+- Some solutions stressed the need to set the
+  [`https`][devserver-https] option to `false` but this failed with
+  `net::ERR_ABORTED` in the browser console and raised the following
+  exception in the server when the client tried to get the
+  [[javascript]] sources:
+
+  ```
+  #<OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=unknown state>
+  ```
+
+  Setting `https: true` removes the issue.
+
+- By leaving the [`inline`][devserver-inline] option to the default
+  `false` value, the live compilation still works but the browser
+  console constantly reports the following error:
+
+  ```
+  Failed to load https://your-workspace-name-yourusername.c9users.io:8082/sockjs-node/info?t=1511016561187: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  Origin 'https://your-workspace-name-yourusername.c9users.io' is therefore not allowed access. The response had HTTP status code 503.
+  ```
+
+  Setting `inline: false` removes the issue.
+
+
+- None of the solutions I found suggested to set the
+  [`public`][devserver-public] option in the `config/webpacker.yml`
+  file and some suggested to pass it to the `webpack-dev-server`
+  command line. By setting it in the configuration file we don't need
+  to care about it in the terminal.
+
+[devserver-https]: https://webpack.js.org/configuration/dev-server/#devserver-https
+[devserver-inline]: https://webpack.js.org/configuration/dev-server/#devserver-inline
+[devserver-public]: https://webpack.js.org/configuration/dev-server/#devserver-public
+
+With this configuration, running as usual `./bin/webpack-dev-server`
+in one terminal and `./bin/rails s -b $IP -p $PORT` in another did work
+for me. (Finally!)
 
 # Flexible solution
 
@@ -132,9 +163,9 @@ I found a hint about another way to configure the `webpack-dev-server`
 in the [`webpacker` documentation]:
 
 > You can use environment variables as options supported by
-> webpack-dev-server in the form `WEBPACKER_DEV_SERVER_<OPTION>`. Please note
-> that these environment variables will always take precedence over the
-> ones already set in the configuration file.
+> webpack-dev-server in the form `WEBPACKER_DEV_SERVER_<OPTION>`.
+> Please note that these environment variables will always take
+> precedence over the ones already set in the configuration file.
 
 However what I did not find in _that_ documentation (but in the
 [`webpacker/dev_server.rb` code]) is that when the configuration of
@@ -174,7 +205,7 @@ if [ -n "${C9_USER}" ]; then
 
   # Make sure that the needed entry in /etc/hosts exists
   HOSTS_ENTRY="0.0.0.0 ${C9_HOSTNAME}"
-  grep --quiet "${HOSTS_ENTRY}" /etc/hosts || echo "${HOSTS_ENTRY}" | sudo tee -a /etc/hosts
+  grep --quiet "^${HOSTS_ENTRY}\$" /etc/hosts || echo "${HOSTS_ENTRY}" | sudo tee -a /etc/hosts
 
   # Adapt the configuration of the webpack-dev-server
   export APP_DOMAIN="${C9_HOSTNAME}"
@@ -191,7 +222,7 @@ if [ -n "${C9_USER}" ]; then
   export WEBPACKER_DEV_SERVER_USE_LOCAL_IP='false'
 fi
 
-bundle exec foreman start -f Procfile.dev
+foreman start -f Procfile.dev
 ```
 
 With these two scripts in place, the application can always be started
@@ -202,19 +233,21 @@ available to both `webpack-dev-server` and `rails server` processes.
 
 # Sources
 
-I found valuable information and hints about how to fix the issue at
-least in the following resources:
+I found valuable information and hints about how to fix the issue in
+at least the following resources:
 
 - ["Making Webpacker run on Cloud 9"] (GitHub issue)
 - ["Anyone here got webpack-dev-server to work on Cloud 9?"] (GitHub issue)
 - [`webpacker` documentation]
 - [`webpacker/dev_server.rb` code]
-- ["Using Rails With Webpack in Cloud 9"]
+- [`webpack-dev-server` documentation]
+- ["Using Rails With Webpack in Cloud 9"] (blog article)
 
 ["Making Webpacker run on Cloud 9"]: https://github.com/rails/webpacker/issues/176
 ["Anyone here got webpack-dev-server to work on Cloud 9?"]: https://github.com/webpack/webpack-dev-server/issues/230
 [`webpacker` documentation]: https://github.com/rails/webpacker/tree/v3.0.2#development
 [`webpacker/dev_server.rb` code]: https://github.com/rails/webpacker/blob/v3.0.2/lib/webpacker/dev_server.rb#L55
+[`webpack-dev-server` documentation]: https://webpack.js.org/configuration/dev-server/
 ["Using Rails With Webpack in Cloud 9"]: http://aalvarez.me/blog/posts/using-rails-with-webpack-in-cloud-9.html
 
 # Versions
@@ -253,7 +286,7 @@ PRETTY_NAME="Ubuntu 14.04.5 LTS"
 VERSION_ID="14.04"
 ```
 
-Everything was tested using Chrome Version 61.
+Everything was tested using Chrome Version 62.
 
 # tl;dr
 
@@ -276,5 +309,7 @@ Then run:
 
 ```bash
 echo "0.0.0.0 ${C9_HOSTNAME}" | sudo tee -a /etc/hosts # execute after every restart
-./bin/webpack-dev-server
 ```
+
+Now running as usual `./bin/webpack-dev-server` in one terminal and `./bin/rails
+s -b $IP -p $PORT` in another should work as expected.
