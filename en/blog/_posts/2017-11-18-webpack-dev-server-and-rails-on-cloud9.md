@@ -36,15 +36,43 @@ every time I changed a [[javascript]] code in a [[react]] component,
 the server compiled the _whole_ [[javascript]] code when I refreshed
 the app in the browser thus taking that long to respond.
 
-I will discuss two ways to tackle the issue: a simple and [quick
-solution](#quick-solution), which is sufficient if we work alone on a
-project, and a slightly more involved but [flexible
-approach](#flexible-solution), that can be useful when several people
-might work in the same codebase.
+After a preliminary remark about the proper binstub version of the
+`./bin/webpack-dev-server` script, I will discuss two ways to tackle
+the issue: a simple and [quick solution](#quick-solution), which is
+sufficient if we work alone on a project, and a slightly more involved
+but [flexible approach](#flexible-solution), that can be useful when
+several people might work in the same codebase.
 
 [Hot Module Replacement (HMR)]: https://webpack.github.io/docs/hot-module-replacement-with-webpack.html
 [`webpack-dev-server`]: https://github.com/webpack/webpack-dev-server
 [`webpacker`]: https://github.com/rails/webpacker
+
+# Binstub versions
+
+A lot of the confusion about the [`webpack-dev-server`] options and
+why they were not properly taken into account, was due in my case to
+an outdated version of the `./bin/webpack-dev-server` script.
+Initially, the script I was using was created by the `rails
+webpacker:install` task of the [`webpacker`] gem v3.0.1
+([source][v3.0.1/lib/install/bin/webpack-dev-server.tt]). However, I
+was using v3.0.2 (!!) of the gem (see full list of
+[versions](#versions) below), which logically expects the
+corresponding [binstub version][#833] of the script
+([source][v3.0.2/exe/webpack-dev-server]). So please make sure that
+you are using the [correct binstub][v3.0.2/exe/webpack-dev-server]
+(the same applies to [`./bin/webpack`][v3.0.2/exe/webpack]). To be
+fair, the [changelog of v3.0.2] properly mentions the change:
+
+> - Added: Binstubs [#833]
+> - (...)
+> - Removed: Inline CLI args for dev server binstub, use env variables
+  instead
+
+[changelog of v3.0.2]: https://github.com/rails/webpacker/blob/v3.0.2/CHANGELOG.md#302---2017-10-04
+[v3.0.1/lib/install/bin/webpack-dev-server.tt]: https://github.com/rails/webpacker/blob/v3.0.1/lib/install/bin/webpack-dev-server.tt
+[v3.0.2/exe/webpack-dev-server]: https://github.com/rails/webpacker/blob/v3.0.2/exe/webpack-dev-server
+[v3.0.2/exe/webpack]: https://github.com/rails/webpacker/blob/v3.0.2/exe/webpack
+[#833]: https://github.com/rails/webpacker/pull/833/files
 
 # Quick solution
 
@@ -159,8 +187,10 @@ maintain the proper configuration in the `config/webpacker.yml` file.
 Moreover, the hostname of your [[cloud9]] workspace is hardcoded, so
 that the configuration is not portable.
 
-I found a hint about another way to configure the `webpack-dev-server`
-in the [`webpacker` documentation]:
+I found a hint about another way to configure
+the `webpack-dev-server` in the [`webpacker` documentation]:[^mentioned-in-changelog]
+
+[^mentioned-in-changelog]: The usage of ENV variables to configure `./bin/webpack-dev-server` is also mentioned in the [changelog of v3.0.2], see ["Binstub versions"](#binstub-versions) section.
 
 > You can use environment variables as options supported by
 > webpack-dev-server in the form `WEBPACKER_DEV_SERVER_<OPTION>`.
@@ -311,5 +341,7 @@ Then run:
 echo "0.0.0.0 ${C9_HOSTNAME}" | sudo tee -a /etc/hosts # execute after every restart
 ```
 
-Now running as usual `./bin/webpack-dev-server` in one terminal and `./bin/rails
-s -b $IP -p $PORT` in another should work as expected.
+Now running as usual `./bin/webpack-dev-server` in one terminal and
+`./bin/rails s -b $IP -p $PORT` in another should work as expected.
+Make sure that you are running the [proper binstub
+version](#binstub-versions) of `./bin/webpack-dev-server`.
