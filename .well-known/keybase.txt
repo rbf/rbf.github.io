@@ -4,47 +4,49 @@ https://keybase.io/rbf
 
 I hereby claim:
 
-  * I am an admin of http://rbf.io
+  * I am an admin of https://rbf.io
   * I am rbf (https://keybase.io/rbf) on keybase.
   * I have a public key ASBcj01Bj4eJ1P302M_ejX2WZIXx7m2Uay4vr7-ndyor6Ao
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "010172b1277796bd8ada621a07995e5432a74765e7e9347732c343b708c69b2b24550a",
-            "host": "keybase.io",
-            "kid": "01205c8f4d418f8789d4fdf4d8cfde8d7d966485f1ee6d946b2e2fafbfa7772a2be80a",
-            "uid": "01a0d0e53b2345784a5f47788c518719",
-            "username": "rbf"
-        },
-        "service": {
-            "hostname": "rbf.io",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "010172b1277796bd8ada621a07995e5432a74765e7e9347732c343b708c69b2b24550a",
+      "host": "keybase.io",
+      "kid": "01205c8f4d418f8789d4fdf4d8cfde8d7d966485f1ee6d946b2e2fafbfa7772a2be80a",
+      "uid": "01a0d0e53b2345784a5f47788c518719",
+      "username": "rbf"
     },
-    "client": {
-        "name": "keybase.io go client",
-        "version": "1.0.17"
-    },
-    "ctime": 1477749045,
-    "expire_in": 504576000,
     "merkle_root": {
-        "ctime": 1477748457,
-        "hash": "e93d521c86e46c8c781b008cff07cbf3a922a58c0fcb23944d04dad85ed6d1303668805f55f5578357f46c1dea68213ea73796fd28cc6f91c5f23e3066b60325",
-        "seqno": 692809
+      "ctime": 1532236362,
+      "hash": "a1fe9a617ee16bf3bd64602505adae16f2a776b423e453f7e76b6cc251a96cc823c1f3e3c33b007f914e6dccd9f09b6050f71eb2ab01bd8821f2fd4b14bca16e",
+      "hash_meta": "036057955af36b2b54189c9040ba0681660b3adacf8e81605c76d522db6b8e95",
+      "seqno": 3310292
     },
-    "prev": "dd86b47c7bf060f02f273a051a51378cc2d197b2e716358dd2dec50203a7724b",
-    "seqno": 9,
-    "tag": "signature"
+    "service": {
+      "entropy": "IMNvZPno/X8k/lWoiJG9QuL5",
+      "hostname": "rbf.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.3.0"
+  },
+  "ctime": 1532236414,
+  "expire_in": 504576000,
+  "prev": "67b8675a086cf67151d90c1f950e8b6018ddd9d0e6098643351790770600be93",
+  "seqno": 15,
+  "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgXI9NQY+HidT99NjP3o19lmSF8e5tlGsuL6+/p3cqK+gKp3BheWxvYWTFAuh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxNzJiMTI3Nzc5NmJkOGFkYTYyMWEwNzk5NWU1NDMyYTc0NzY1ZTdlOTM0NzczMmMzNDNiNzA4YzY5YjJiMjQ1NTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNWM4ZjRkNDE4Zjg3ODlkNGZkZjRkOGNmZGU4ZDdkOTY2NDg1ZjFlZTZkOTQ2YjJlMmZhZmJmYTc3NzJhMmJlODBhIiwidWlkIjoiMDFhMGQwZTUzYjIzNDU3ODRhNWY0Nzc4OGM1MTg3MTkiLCJ1c2VybmFtZSI6InJiZiJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoicmJmLmlvIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNyJ9LCJjdGltZSI6MTQ3Nzc0OTA0NSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDc3NzQ4NDU3LCJoYXNoIjoiZTkzZDUyMWM4NmU0NmM4Yzc4MWIwMDhjZmYwN2NiZjNhOTIyYTU4YzBmY2IyMzk0NGQwNGRhZDg1ZWQ2ZDEzMDM2Njg4MDVmNTVmNTU3ODM1N2Y0NmMxZGVhNjgyMTNlYTczNzk2ZmQyOGNjNmY5MWM1ZjIzZTMwNjZiNjAzMjUiLCJzZXFubyI6NjkyODA5fSwicHJldiI6ImRkODZiNDdjN2JmMDYwZjAyZjI3M2EwNTFhNTEzNzhjYzJkMTk3YjJlNzE2MzU4ZGQyZGVjNTAyMDNhNzcyNGIiLCJzZXFubyI6OSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBmWbgQrffQlwZTBTPHtaWdXK9FDk7tbqxWnNguaYmzaXJs4d+TvHhn3zdj+XB4vA/xCenH1oDn/10Er6oipm4NqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgBH0dyKzrSEMO2L8RcEW/5SfsBC6bXt99Boy8arHqzM2jdGFnzQICp3ZlcnNpb24B
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgXI9NQY+HidT99NjP3o19lmSF8e5tlGsuL6+/p3cqK+gKp3BheWxvYWTESpcCD8QgZ7hnWghs9nFR2QwflQ6LYBjd2dDmCYZDNReQdwYAvpPEIPnbLjSEIS9nPIK7v+6fi4N3QzZzoF/V8aHPqZpK/UB3AgHCo3NpZ8RAf5E7ZfKir+Vn7zUuPnhJJrtMpUBpzNmU3y+frege2MMdfZ3iV/tIlcELOJMbqhpol3pFEnjgdRmU+Pv6RHWPD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJjZe/equZQdSYZPmAZZuCFIf0wDiF9vpQf4IpITW0Gzo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
