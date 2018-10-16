@@ -40,7 +40,7 @@ default_color_theme: theme-light
 
 google_analytics: UA-42657236-4
 
-gems:
+plugins:
   # - jekyll-avatar       # does not work :( https://github.com/benbalter/jekyll-avatar
   - jekyll-feed           # SOURCE: https://github.com/jekyll/jekyll-feed
   - jemoji                # SOURCE: https://github.com/jekyll/jemoji
