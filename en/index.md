@@ -10,13 +10,13 @@ redirect_from: /en/
 
 {% include avatar.html size='medium' %}
 
-Hi! I'm Rob, a software engineer based in Tokyo, Japan.
+Hi! I'm Rob, a software engineer.
 
 I make functional software,
 
-[write articles](/blog) and
+sometimes [write](/blog) and
 
-[learn things](/learning).
+[learn](/learning) things.
 
 {% include email within_tag='p'%}
 
