@@ -29,11 +29,12 @@
         <div class="tag-info">
             <p class="description">(({{tag}}.description))</p>
             <div class="links">
-                {% assign possible_tag_links = 'website|about|repo|documentation|wikipedia' | split: '|' %}
+                {% assign possible_tag_links = 'website|about|repo|documentation|wikipedia|packages' | split: '|' %}
                 {% assign existent_tag_links = '' | split: '' %}
                 {% for tl in possible_tag_links %}
                     {% if tag_ref[tl] %}
-                        {% capture link_html %}<a class="{{tl}}-link" href="(({{tag}}.{{tl}}))">{{w[tl] | default: w_default[tl] | default: tl | capitalize}}</a>{% endcapture %}
+                        {% capture tl-name %}{{tl}}-name{% endcapture %}
+                        {% capture link_html %}<a class="{{tl}}-link" href="(({{tag}}.{{tl}}))">{{w[tl] | default: w_default[tl] | default: tl | capitalize}}{% if tag_ref[tl-name] %} ({{tag_ref[tl-name]}}){% endif %}</a>{% endcapture %}
                         {% assign existent_tag_links = existent_tag_links | push: link_html %}
                     {% endif %}
                 {% endfor %}
