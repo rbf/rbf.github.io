@@ -73,9 +73,6 @@ jQuery ->
 
     $(window).on 'hashchange', updateElemsToShow
 
-    # Make all non-local links open in new tab
-    $("a[href^=http]").attr("target", "_blank");
-
     # SOURCE: https://github.com/basimilch/basimilch.github.io/blob/c3c8a6b/javascripts/custom.js#L21-L31
     $('[data-href]').click (e) ->
       href = $(@).data 'href'

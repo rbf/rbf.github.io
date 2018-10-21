@@ -261,6 +261,7 @@ ul.tags {
 $ascii-open-in-new-tab: "\27a0";
 // $ascii-open-in-new-tab: "\261e";
 a[target='_blank']:not(.no-link-in-new-tab-arrow),
+a[href^='http']:not(.no-link-in-new-tab-arrow),
 [data-href^='http']:not(.no-link-in-new-tab-arrow) {
   &:hover::after {
     content: $ascii-open-in-new-tab;
